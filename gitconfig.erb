@@ -1,0 +1,21 @@
+[user]
+  name = <%= print("Your Name: "); STDOUT.flush; STDIN.gets.chomp %> 
+  email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
+[alias]
+	ci = commit -a
+	co = checkout
+	st = status
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+	ui = auto
+	grep = auto
+	interactive = auto
+	pager = true
+[core]
+	editor = /usr/bin/vim
+	pager = most
+  excludesfile = ~/.gitignore
+[push]
+	default = matching

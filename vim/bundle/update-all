@@ -1,0 +1,11 @@
+#!/usr/bin/env zsh
+
+for dir in *(/); do
+  if [[ -d $dir/.git ]]; then
+    cd $dir
+    echo "Updating $dir..."
+    git checkout master &> /dev/null
+    git pull
+    cd ..
+  fi
+done
