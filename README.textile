@@ -23,6 +23,7 @@ h2. Vim plugins
 * "nerdcommenter":http://github.com/scrooloose/nerdcommenter
 * "vim-markdown":http://github.com/plasticboy/vim-markdown
 * "vim-git":http://github.com/tpope/vim-git
+* "vim-fugitive":http://github.com/tpope/vim-fugitive
 
 h1. Acknowledgements
 
