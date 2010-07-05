@@ -22,6 +22,7 @@ h2. Vim plugins
 * "nerdtree":http://github.com/scrooloose/nerdtree
 * "nerdcommenter":http://github.com/scrooloose/nerdcommenter
 * "vim-markdown":http://github.com/plasticboy/vim-markdown
+* "vim-git":http://github.com/tpope/vim-git
 
 h1. Acknowledgements
 
