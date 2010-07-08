@@ -77,10 +77,9 @@ map <Leader>sv :RSview
 map <Leader>su :RSunittest 
 map <Leader>sf :RSfunctionaltest
 
-" Copy paste
-map <C-c> "+yy
-map <C-v> "+p
-
 " Move lines up and down
 map <C-J> :m +1 <CR>
 map <C-K> :m -2 <CR>
+
+" Fix issues with screen and ctrl+left/right
+set term=xterm
