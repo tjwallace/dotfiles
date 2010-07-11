@@ -21,6 +21,7 @@ plugins=(git rake osx brew)
 source $ZSH/oh-my-zsh.sh
 
 alias ll='ls -lh'
+alias l='ls -lah'
 
 # Ctrl+left/right
 bindkey '5D' emacs-backward-word
