@@ -1,11 +1,16 @@
 filetype off
-
 call pathogen#runtime_append_all_bundles()
 
-" Line numbers
+set nocompatible
+set encoding=utf-8
+
+" leader character
+let mapleader = ","
+
+" line numbers
 set number
 
-" Tab fix
+" tab fix
 set tabstop=2
 set shiftwidth=2
 set smarttab
@@ -14,34 +19,42 @@ if has("autocmd")
 	filetype plugin indent on
 endif
 
-" Allow mouse clicks
+" backups
+set backupdir=~/.vim/tmp/backup//
+set directory=~/.vim/tmp/swap//
+set backup
+
+" allow mouse clicks
 set mouse=a
 
-" Syntax highlighting
+" syntax highlighting
 syntax on
 
-" Show matching brackets.
+" show matching brackets.
 set showmatch
+
+" bounce between brackets
+nnoremap <tab> %
+vnoremap <tab> %
 
 " show in title bar
 set title
 
-" highlight search
+" search
 set hlsearch
-" make searches case-insensitive, unless they contain upper-case letters:
 set ignorecase
-" unless they contain upper-case letters:
 set smartcase
-" incremental search
 set incsearch
+nnoremap <leader><space> :noh<cr>
 
-" Wrap at word
+" wrap at word
 set linebreak
 
-" Colorscheme
-colorscheme desertEx
+" colorscheme
+set background=dark
+colorscheme delek
 
-" Make cursor move by visual lines instead of file lines (when wrapping)
+" make cursor move by visual lines instead of file lines (when wrapping)
 map <up> gk
 map k gk
 imap <up> <C-o>gk
@@ -50,11 +63,38 @@ map j gj
 imap <down> <C-o>gj
 map E ge
 
-" , is the leader character
-let mapleader = ","
+" invisibles
+nmap <leader>l :set list!<CR>
+set listchars=tab:▸\ ,eol:¬
+
+" shorcuts
+nnoremap ; :
+inoremap jj <ESC>
+
+" save when focus lost
+au FocusLost * :wa
+
+" new vertical split
+nnoremap <leader>w <C-w>v<C-w>l
+
+" move around splits
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" clean whitespace
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+" sudo write
+cmap w!! w !sudo tee % >/dev/null
 
 " NERDTree
-:noremap <Leader>n :NERDTreeToggle<CR>
+map <F2> :NERDTreeToggle<cr>
+let NERDTreeIgnore=['.vim$', '\~$']
+
+" rainbow parens
+nmap <leader>R :RainbowParenthesesToggle<CR>
 
 " copy to clipboard
 nmap <leader>y "+y
@@ -78,30 +118,35 @@ nmap <leader>7 "7p
 nmap <leader>8 "8p
 nmap <leader>9 "9p
 
-" Buffers
+" buffers
 map <A-Left> :bp<CR>
 map <A-Right> :bn<CR>
 
-" Leader shortcuts for Rails commands
-map <Leader>m :Rmodel 
-map <Leader>c :Rcontroller 
-map <Leader>v :Rview 
-map <Leader>u :Runittest 
-map <Leader>f :Rfunctionaltest 
-map <Leader>tm :RTmodel 
-map <Leader>tc :RTcontroller 
-map <Leader>tv :RTview 
-map <Leader>tu :RTunittest 
-map <Leader>tf :RTfunctionaltest 
-map <Leader>sm :RSmodel 
-map <Leader>sc :RScontroller 
-map <Leader>sv :RSview 
-map <Leader>su :RSunittest 
+" leader shortcuts for Rails commands
+map <Leader>m :Rmodel
+map <Leader>c :Rcontroller
+map <Leader>v :Rview
+map <Leader>u :Runittest
+map <Leader>f :Rfunctionaltest
+map <Leader>tm :RTmodel
+map <Leader>tc :RTcontroller
+map <Leader>tv :RTview
+map <Leader>tu :RTunittest
+map <Leader>tf :RTfunctionaltest
+map <Leader>sm :RSmodel
+map <Leader>sc :RScontroller
+map <Leader>sv :RSview
+map <Leader>su :RSunittest
 map <Leader>sf :RSfunctionaltest
 
-" Move lines up and down
+" move lines up and down
 map <C-J> :m +1 <CR>
 map <C-K> :m -2 <CR>
 
-" Fix issues with screen and ctrl+left/right
+" fix issues with screen and ctrl+left/right
 set term=xterm
+
+if has('gui_running')
+  colorscheme molokai
+  set background=dark
+endif
