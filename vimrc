@@ -101,6 +101,7 @@ cmap w!! w !sudo tee % >/dev/null
 
 " NERDTree
 map <F2> :NERDTreeToggle<cr>
+map <leader>n :NERDTreeToggle<cr>
 let NERDTreeIgnore=['.vim$', '\~$']
 
 " rainbow parens
