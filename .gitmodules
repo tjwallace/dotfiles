@@ -55,3 +55,6 @@
 [submodule "vim/bundle/textile"]
 	path = vim/bundle/textile
 	url = git://github.com/kfl62/textile.vim.git
+[submodule "vim/bundle/yankring"]
+	path = vim/bundle/yankring
+	url = git://github.com/chrismetcalf/vim-yankring.git
