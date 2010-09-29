@@ -87,11 +87,11 @@ au FocusLost * :wa
 " new vertical split
 nnoremap <leader>s<space> <C-w>v<C-w>l
 
-" move around splits
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+" navigate/move splits
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
 " clean whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
@@ -130,8 +130,8 @@ nmap <leader>8 "8p
 nmap <leader>9 "9p
 
 " buffers
-map <A-Left> :bp<CR>
-map <A-Right> :bn<CR>
+map <A-H> :bp<CR>
+map <A-L> :bn<CR>
 
 " leader shortcuts for Rails commands
 map <Leader>m :Rmodel
