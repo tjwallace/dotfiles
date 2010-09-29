@@ -10,20 +10,25 @@ I use my "personal fork":http://github.com/tjwallace/oh-my-zsh of "oh-my-zsh":ht
 
 h2. Vim plugins
 
-* "vim-rails":http://github.com/tpope/vim-rails
-* "vim-cucumber":http://github.com/tpope/vim-cucumber
-* "vim-vividchalk":http://github.com/tpope/vim-vividchalk
-* "vim-haml":http://github.com/tpope/vim-haml
-* "vim-endwise":http://github.com/tpope/vim-endwise
-* "vim-surround":http://github.com/tpope/vim-surround
-* "vim-unimpaired":http://github.com/tpope/vim-unimpaired
-* "vim-abolish":http://github.com/tpope/vim-abolish
-* "vim-repeat":http://github.com/tpope/vim-repeat
+* "rails":http://github.com/tpope/vim-rails
+* "cucumber":http://github.com/tpope/vim-cucumber
+* "vividchalk":http://github.com/tpope/vim-vividchalk
+* "haml":http://github.com/tpope/vim-haml
+* "endwise":http://github.com/tpope/vim-endwise
+* "surround":http://github.com/tpope/vim-surround
+* "unimpaired":http://github.com/tpope/vim-unimpaired
+* "abolish":http://github.com/tpope/vim-abolish
+* "repeat":http://github.com/tpope/vim-repeat
 * "nerdtree":http://github.com/scrooloose/nerdtree
 * "nerdcommenter":http://github.com/scrooloose/nerdcommenter
-* "vim-markdown":http://github.com/plasticboy/vim-markdown
-* "vim-git":http://github.com/tpope/vim-git
-* "vim-fugitive":http://github.com/tpope/vim-fugitive
+* "markdown":http://github.com/plasticboy/vim-markdown
+* "git":http://github.com/tpope/vim-git
+* "fugitive":http://github.com/tpope/vim-fugitive
+* "bufexplorer":http://github.com/bronson/vim-bufexplorer
+* "Command-T":http://github.com/wincent/Command-T
+* "ruby":http://github.com/vim-ruby/vim-ruby
+* "textile.vim":git://github.com/kfl62/textile.vim.git
+* _Check for more in @vim/bundle@_
 
 h1. Acknowledgements
 

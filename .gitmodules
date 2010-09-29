@@ -46,3 +46,12 @@
 [submodule "vim/bundle/vim-bufexplorer"]
 	path = vim/bundle/vim-bufexplorer
 	url = git://github.com/bronson/vim-bufexplorer.git
+[submodule "vim/bundle/command-t"]
+	path = vim/bundle/command-t
+	url = git://github.com/wincent/Command-T.git
+[submodule "vim/bundle/vim-ruby"]
+	path = vim/bundle/vim-ruby
+	url = git://github.com/vim-ruby/vim-ruby.git
+[submodule "vim/bundle/textile"]
+	path = vim/bundle/textile
+	url = git://github.com/kfl62/textile.vim.git
