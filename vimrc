@@ -63,7 +63,7 @@ map j gj
 imap <down> <C-o>gj
 map E ge
 
-" use hjkl god dammit!
+" force hjkl
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
@@ -87,7 +87,7 @@ au FocusLost * :wa
 " new vertical split
 nnoremap <leader>s<space> <C-w>v<C-w>l
 
-" navigate/move splits
+" navigate splits
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
@@ -128,6 +128,9 @@ nmap <leader>6 "6p
 nmap <leader>7 "7p
 nmap <leader>8 "8p
 nmap <leader>9 "9p
+
+let g:yankring_history_dir = '~/.vim/tmp'
+let g:yankring_history_file = 'yankring_history'
 
 " buffers
 map <A-H> :bp<CR>
