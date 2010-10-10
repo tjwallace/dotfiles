@@ -161,6 +161,6 @@ map <C-K> :m -2 <CR>
 set term=xterm
 
 if has('gui_running')
-  colorscheme molokai
+  colorscheme liquidcarbon
   set background=dark
 endif
