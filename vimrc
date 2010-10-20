@@ -108,7 +108,7 @@ let NERDTreeIgnore=['.vim$', '\~$']
 nmap <leader>R :RainbowParenthesesToggle<CR>
 
 " copy to clipboard
-nmap <leader>y "+y
+vmap <leader>y "+y
 " copy current line to clipboard
 nmap <leader>Y "+yy
 " paste from clipboard
