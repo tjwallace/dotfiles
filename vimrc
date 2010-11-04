@@ -86,6 +86,8 @@ au FocusLost * :wa
 
 " new vertical split
 nnoremap <leader>s<space> <C-w>v<C-w>l
+nnoremap <leader>vs<space> <C-w><C-v>
+nnoremap <leader>hs<space> <C-w><C-s>
 
 " navigate splits
 map <C-h> <C-w>h
@@ -154,13 +156,13 @@ map <Leader>su :RSunittest
 map <Leader>sf :RSfunctionaltest
 
 " move lines up and down
-map <C-J> :m +1 <CR>
-map <C-K> :m -2 <CR>
+map <A-j> :m +1 <CR>
+map <A-k> :m -2 <CR>
 
 " fix issues with screen and ctrl+left/right
 set term=xterm
 
 if has('gui_running')
-  colorscheme liquidcarbon
+  colorscheme molokai
   set background=dark
 endif
