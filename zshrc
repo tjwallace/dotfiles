@@ -32,5 +32,7 @@ if which most > /dev/null; then
   export PAGER=most
 fi
 
+export EDITOR=vim
+
 # RVM
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
