@@ -164,5 +164,10 @@ set term=xterm
 
 if has('gui_running')
   colorscheme molokai
-  set background=dark
+endif
+
+if has("gui_macvim")
+  set guioptions=aAce
+  set transparency=10
+  set guifont=Menlo:h13
 endif
