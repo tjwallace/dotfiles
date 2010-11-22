@@ -168,6 +168,5 @@ endif
 
 if has("gui_macvim")
   set guioptions=aAce
-  set transparency=10
-  set guifont=Menlo:h13
+  set transparency=5
 endif
