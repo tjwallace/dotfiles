@@ -164,9 +164,10 @@ set term=xterm
 
 if has('gui_running')
   colorscheme molokai
-endif
-
-if has("gui_macvim")
-  set guioptions=aAce
-  set transparency=5
+  if has('gui_gtk2')
+    set guioptions=m
+  elseif has('gui_macvim')
+    set guioptions=aAce
+    set transparency=5
+  endif
 endif
