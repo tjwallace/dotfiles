@@ -58,3 +58,6 @@
 [submodule "vim/bundle/yankring"]
 	path = vim/bundle/yankring
 	url = git://github.com/chrismetcalf/vim-yankring.git
+[submodule "vim/bundle/ack"]
+	path = vim/bundle/ack
+	url = git://github.com/mileszs/ack.vim.git
