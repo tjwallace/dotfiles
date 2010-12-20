@@ -95,6 +95,14 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" buffers
+map <A-h> :bp<CR>
+map <A-l> :bn<CR>
+
+" move lines up and down
+map <A-j> :m +1 <CR>
+map <A-k> :m -2 <CR>
+
 " clean whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
@@ -134,10 +142,6 @@ nmap <leader>9 "9p
 let g:yankring_history_dir = '~/.vim/tmp'
 let g:yankring_history_file = 'yankring_history'
 
-" buffers
-map <A-H> :bp<CR>
-map <A-L> :bn<CR>
-
 " leader shortcuts for Rails commands
 map <Leader>m :Rmodel
 map <Leader>c :Rcontroller
@@ -154,10 +158,6 @@ map <Leader>sc :RScontroller
 map <Leader>sv :RSview
 map <Leader>su :RSunittest
 map <Leader>sf :RSfunctionaltest
-
-" move lines up and down
-map <A-j> :m +1 <CR>
-map <A-k> :m -2 <CR>
 
 " fix issues with screen and ctrl+left/right
 set term=xterm
