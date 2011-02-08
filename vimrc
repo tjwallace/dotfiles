@@ -16,7 +16,7 @@ set shiftwidth=2
 set smarttab
 set expandtab
 if has("autocmd")
-	filetype plugin indent on
+  filetype plugin indent on
 endif
 
 " backups
