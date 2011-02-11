@@ -55,12 +55,8 @@ set background=dark
 colorscheme delek
 
 " make cursor move by visual lines instead of file lines (when wrapping)
-map <up> gk
 map k gk
-imap <up> <C-o>gk
-map <down> gj
 map j gj
-imap <down> <C-o>gj
 map E ge
 
 " force hjkl
@@ -72,6 +68,12 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
+
+" jump with J/K
+nnoremap J 5j
+vnoremap J 5j
+nnoremap K 5k
+vnoremap K 5k
 
 " invisibles
 nmap <leader>l :set list!<CR>
@@ -126,18 +128,6 @@ nmap <leader>p "+gP
 
 " show the registers from things cut/yanked
 nmap <leader>r :registers<CR>
-
-" map the various registers to a leader shortcut for pasting from them
-nmap <leader>0 "0p
-nmap <leader>1 "1p
-nmap <leader>2 "2p
-nmap <leader>3 "3p
-nmap <leader>4 "4p
-nmap <leader>5 "5p
-nmap <leader>6 "6p
-nmap <leader>7 "7p
-nmap <leader>8 "8p
-nmap <leader>9 "9p
 
 let g:yankring_history_dir = '~/.vim/tmp'
 let g:yankring_history_file = 'yankring_history'
