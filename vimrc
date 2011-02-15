@@ -88,8 +88,8 @@ au FocusLost * :wa
 
 " new vertical split
 nnoremap <leader>s<space> <C-w>v<C-w>l
-nnoremap <leader>vs<space> <C-w><C-v>
-nnoremap <leader>hs<space> <C-w><C-s>
+nnoremap <leader>vs <C-w><C-v>
+nnoremap <leader>hs <C-w><C-s>
 
 " navigate splits
 map <C-h> <C-w>h
