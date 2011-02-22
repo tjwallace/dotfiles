@@ -28,6 +28,7 @@ h2. Vim plugins
 * "Command-T":http://github.com/wincent/Command-T
 * "ruby":http://github.com/vim-ruby/vim-ruby
 * "textile.vim":git://github.com/kfl62/textile.vim.git
+* "indent-guides":git://github.com/nathanaelkane/vim-indent-guides.git
 * _Check for more in @vim/bundle@_
 
 h1. Acknowledgements
