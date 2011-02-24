@@ -29,6 +29,7 @@ h2. Vim plugins
 * "ruby":http://github.com/vim-ruby/vim-ruby
 * "textile.vim":git://github.com/kfl62/textile.vim.git
 * "indent-guides":git://github.com/nathanaelkane/vim-indent-guides.git
+* "gundo":http://github.com/sjl/gundo.vim
 * _Check for more in @vim/bundle@_
 
 h1. Acknowledgements

@@ -119,6 +119,9 @@ let NERDTreeIgnore=['.vim$', '\~$']
 " rainbow parens
 nmap <leader>R :RainbowParenthesesToggle<CR>
 
+" gundo
+nnoremap <F3> :GundoToggle<CR>
+
 " copy to clipboard
 vmap <leader>y "+y
 " copy current line to clipboard
