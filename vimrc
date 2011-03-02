@@ -86,7 +86,7 @@ inoremap jj <ESC>
 " save when focus lost
 au FocusLost * :wa
 
-" new vertical split
+" new split
 nnoremap <leader>s<space> <C-w>v<C-w>l
 nnoremap <leader>vs <C-w><C-v>
 nnoremap <leader>hs <C-w><C-s>
@@ -97,7 +97,7 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" buffers
+" navigate buffers
 map <A-h> :bp<CR>
 map <A-l> :bn<CR>
 
