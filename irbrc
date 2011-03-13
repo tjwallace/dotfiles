@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 # gem install irbtools
 # gem install irb_rocket --source http://merbi.st
 
