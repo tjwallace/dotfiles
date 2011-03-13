@@ -3,7 +3,11 @@
 # gem install irbtools
 # gem install irb_rocket --source http://merbi.st
 
-require 'irbtools'
+begin
+  require 'irbtools'
+rescue Exception => ex
+  puts "* Unable to require 'irbtools'"
+end
 
 # quick benchmarking
 # http://stackoverflow.com/questions/123494/whats-your-favourite-irb-trick/123834#123834
