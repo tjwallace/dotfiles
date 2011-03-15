@@ -27,8 +27,8 @@ h2. Vim plugins
 * "bufexplorer":http://github.com/bronson/vim-bufexplorer
 * "Command-T":http://github.com/wincent/Command-T
 * "ruby":http://github.com/vim-ruby/vim-ruby
-* "textile.vim":git://github.com/kfl62/textile.vim.git
-* "indent-guides":git://github.com/nathanaelkane/vim-indent-guides.git
+* "textile.vim":http://github.com/kfl62/textile.vim
+* "indent-guides":http://github.com/nathanaelkane/vim-indent-guides
 * "gundo":http://github.com/sjl/gundo.vim
 * _Check for more in @vim/bundle@_
 
