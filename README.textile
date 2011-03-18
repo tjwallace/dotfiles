@@ -6,32 +6,32 @@ h1. Features
 
 h2. oh-my-zsh
 
-I use my "personal fork":http://github.com/tjwallace/oh-my-zsh of "oh-my-zsh":http://github.com/robbyrussell/oh-my-zsh.
+I use my "personal fork":https://github.com/tjwallace/oh-my-zsh of "oh-my-zsh":https://github.com/robbyrussell/oh-my-zsh.
 
 h2. Vim plugins
 
-* "rails":http://github.com/tpope/vim-rails
-* "cucumber":http://github.com/tpope/vim-cucumber
-* "vividchalk":http://github.com/tpope/vim-vividchalk
-* "haml":http://github.com/tpope/vim-haml
-* "endwise":http://github.com/tpope/vim-endwise
-* "surround":http://github.com/tpope/vim-surround
-* "unimpaired":http://github.com/tpope/vim-unimpaired
-* "abolish":http://github.com/tpope/vim-abolish
-* "repeat":http://github.com/tpope/vim-repeat
-* "nerdtree":http://github.com/scrooloose/nerdtree
-* "nerdcommenter":http://github.com/scrooloose/nerdcommenter
-* "markdown":http://github.com/plasticboy/vim-markdown
-* "git":http://github.com/tpope/vim-git
-* "fugitive":http://github.com/tpope/vim-fugitive
-* "Command-T":http://github.com/wincent/Command-T
-* "ruby":http://github.com/vim-ruby/vim-ruby
-* "textile.vim":http://github.com/kfl62/textile.vim
-* "indent-guides":http://github.com/nathanaelkane/vim-indent-guides
-* "gundo":http://github.com/sjl/gundo.vim
+* "rails":https://github.com/tpope/vim-rails
+* "cucumber":https://github.com/tpope/vim-cucumber
+* "vividchalk":https://github.com/tpope/vim-vividchalk
+* "haml":https://github.com/tpope/vim-haml
+* "endwise":https://github.com/tpope/vim-endwise
+* "surround":https://github.com/tpope/vim-surround
+* "unimpaired":https://github.com/tpope/vim-unimpaired
+* "abolish":https://github.com/tpope/vim-abolish
+* "repeat":https://github.com/tpope/vim-repeat
+* "nerdtree":https://github.com/scrooloose/nerdtree
+* "nerdcommenter":https://github.com/scrooloose/nerdcommenter
+* "markdown":https://github.com/plasticboy/vim-markdown
+* "git":https://github.com/tpope/vim-git
+* "fugitive":https://github.com/tpope/vim-fugitive
+* "Command-T":https://github.com/wincent/Command-T
+* "ruby":https://github.com/vim-ruby/vim-ruby
+* "textile.vim":https://github.com/kfl62/textile.vim
+* "indent-guides":https://github.com/nathanaelkane/vim-indent-guides
+* "gundo":https://github.com/sjl/gundo.vim
 * "bufexplorer":https://github.com/corntrace/bufexplorer
 * _Check for more in @vim/bundle@_
 
 h1. Acknowledgements
 
-The Rakefile and rake completion code comes from "Ryan Bates' dotfile repository":http://github.com/ryanb/dotfiles.
+The Rakefile and rake completion code comes from "Ryan Bates' dotfile repository":https://github.com/ryanb/dotfiles.
