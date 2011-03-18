@@ -24,7 +24,6 @@ h2. Vim plugins
 * "markdown":http://github.com/plasticboy/vim-markdown
 * "git":http://github.com/tpope/vim-git
 * "fugitive":http://github.com/tpope/vim-fugitive
-* "bufexplorer":http://github.com/bronson/vim-bufexplorer
 * "Command-T":http://github.com/wincent/Command-T
 * "ruby":http://github.com/vim-ruby/vim-ruby
 * "textile.vim":http://github.com/kfl62/textile.vim
