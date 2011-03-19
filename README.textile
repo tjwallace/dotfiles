@@ -30,6 +30,7 @@ h2. Vim plugins
 * "indent-guides":https://github.com/nathanaelkane/vim-indent-guides
 * "gundo":https://github.com/sjl/gundo.vim
 * "bufexplorer":https://github.com/corntrace/bufexplorer
+* "slim":https://github.com/bbommarito/vim-slim
 * _Check for more in @vim/bundle@_
 
 h1. Acknowledgements
