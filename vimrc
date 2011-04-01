@@ -52,7 +52,7 @@ set linebreak
 
 " colorscheme
 set background=dark
-colorscheme delek
+colorscheme solarized
 
 " make cursor move by visual lines instead of file lines (when wrapping)
 map k gk
@@ -155,13 +155,3 @@ map <Leader>sf :RSfunctionaltest
 
 " fix issues with screen and ctrl+left/right
 set term=xterm
-
-if has('gui_running')
-  colorscheme molokai
-  if has('gui_gtk2')
-    set guioptions=m
-  elseif has('gui_macvim')
-    set guioptions=aAce
-    set transparency=5
-  endif
-endif
