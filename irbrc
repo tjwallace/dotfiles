@@ -5,7 +5,7 @@
 
 begin
   require 'irbtools'
-rescue Exception => ex
+rescue
   puts "* Unable to require 'irbtools'"
 end
 
