@@ -106,7 +106,7 @@ map <A-j> :m +1 <CR>
 map <A-k> :m -2 <CR>
 
 " clean whitespace
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+nnoremap <leader>W<space> :%s/\s\+$//<cr>:let @/=''<CR>
 
 " sudo write
 cmap w!! w !sudo tee % >/dev/null
@@ -155,3 +155,7 @@ map <Leader>sf :RSfunctionaltest
 
 " fix issues with screen and ctrl+left/right
 set term=xterm
+
+" highlight current line
+set cursorline
+hi CursorLine cterm=NONE ctermbg=black
