@@ -103,7 +103,7 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 # for osx
-if [ -f `brew --prefix`/etc/bash_completion ]; then
+if [ hash brew 2>&- && -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
 
