@@ -25,6 +25,8 @@ alias l='ls -lah'
 alias b='bundle exec'
 alias brake='bundle exec rake'
 
+export PATH=/usr/local/bin/:$PATH
+
 # Ctrl+left/right
 bindkey '5D' emacs-backward-word
 bindkey '5C' emacs-forward-word
