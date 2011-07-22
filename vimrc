@@ -2,19 +2,22 @@ filetype off
 call pathogen#runtime_append_all_bundles()
 
 set nocompatible
+
+set number
+set ruler
+syntax on
+
 set encoding=utf-8
 
 " leader character
 let mapleader = ","
 
-" line numbers
-set number
-
-" tab fix
+" whitespace
 set tabstop=2
 set shiftwidth=2
 set smarttab
 set expandtab
+set list listchars=tab:▸\ ,trail:·
 if has("autocmd")
   filetype plugin indent on
 endif
@@ -24,11 +27,12 @@ set backupdir=~/.vim/tmp/backup//
 set directory=~/.vim/tmp/swap//
 set backup
 
+" tab completion
+set wildmode=list:longest,list:full
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
+
 " allow mouse clicks
 set mouse=a
-
-" syntax highlighting
-syntax on
 
 " show matching brackets.
 set showmatch
@@ -39,6 +43,9 @@ vnoremap <tab> %
 
 " show in title bar
 set title
+
+" status bar
+set laststatus=2
 
 " search
 set hlsearch
@@ -74,10 +81,6 @@ nnoremap J 5j
 vnoremap J 5j
 nnoremap K 5k
 vnoremap K 5k
-
-" invisibles
-nmap <leader>l :set list!<CR>
-set listchars=tab:▸\ ,eol:¬
 
 " shorcuts
 nnoremap ; :
@@ -159,3 +162,13 @@ set term=xterm
 " highlight current line
 set cursorline
 hi CursorLine cterm=NONE ctermbg=black
+
+" add json syntax highlighting
+au BufNewFile,BufRead *.json set ft=javascript
+
+" Thorfile, Rakefile, Vagrantfile and Gemfile are ruby
+au BufNewFile,BufRead {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
+
+" enable syntastic syntax checking
+let g:syntastic_enable_signs=1
+let g:syntastic_quiet_warnings=1
