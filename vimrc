@@ -109,7 +109,7 @@ map <A-j> :m +1 <CR>
 map <A-k> :m -2 <CR>
 
 " clean whitespace
-nnoremap <leader>W<space> :%s/\s\+$//<cr>:let @/=''<CR>
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 " sudo write
 cmap w!! w !sudo tee % >/dev/null

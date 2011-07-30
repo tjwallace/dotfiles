@@ -31,7 +31,6 @@ h2. Vim plugins
 * "gundo":https://github.com/sjl/gundo.vim
 * "bufexplorer":https://github.com/corntrace/bufexplorer
 * "slim":https://github.com/bbommarito/vim-slim
-* "easymotion":https://github.com/Lokaltog/vim-easymotion
 * _Check for more in @vim/bundle@_
 
 h1. Acknowledgements
