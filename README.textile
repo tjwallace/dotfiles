@@ -4,9 +4,7 @@ Clone the repository to a location of your choosing and run @rake install@.
 
 h1. Features
 
-h2. oh-my-zsh
-
-I use my "personal fork":https://github.com/tjwallace/oh-my-zsh of "oh-my-zsh":https://github.com/robbyrussell/oh-my-zsh.
+* "oh-my-zsh":https://github.com/robbyrussell/oh-my-zsh
 
 h2. Vim plugins
 
@@ -35,4 +33,4 @@ h2. Vim plugins
 
 h1. Acknowledgements
 
-The Rakefile and rake completion code comes from "Ryan Bates' dotfile repository":https://github.com/ryanb/dotfiles.
+The Rakefile comes from "Ryan Bates' dotfile repository":https://github.com/ryanb/dotfiles.

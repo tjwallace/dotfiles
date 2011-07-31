@@ -36,7 +36,7 @@
 	url = git://github.com/plasticboy/vim-markdown.git
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
-	url = git://github.com/tjwallace/oh-my-zsh.git
+	url = git://github.com/robbyrussell/oh-my-zsh.git
 [submodule "vim/bundle/vim-git"]
 	path = vim/bundle/vim-git
 	url = git://github.com/tpope/vim-git.git

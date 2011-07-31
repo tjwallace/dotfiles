@@ -3,7 +3,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 # Set to the name theme to load.
 # Look in ~/.oh-my-zsh/themes/
-export ZSH_THEME="tjwallace"
+export ZSH_THEME="bira"
 
 # Set to this to use case-sensitive completion
 # export CASE_SENSITIVE="true"
@@ -16,7 +16,7 @@ export ZSH_THEME="tjwallace"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git gitflow gem rake osx brew vagrant)
+plugins=(brew bundler gem git rake vagrant vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -37,6 +37,10 @@ if which most > /dev/null; then
 fi
 
 export EDITOR=vim
+
+# history search up and down
+bindkey '^[[A' history-beginning-search-backward
+bindkey '^[[B' history-beginning-search-forward
 
 # RVM
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
