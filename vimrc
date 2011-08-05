@@ -22,6 +22,11 @@ if has("autocmd")
   filetype plugin indent on
 endif
 
+" folding
+set foldmethod=syntax
+set foldnestmax=3
+set foldlevelstart=3
+
 " backups
 set backupdir=~/.vim/tmp/backup//
 set directory=~/.vim/tmp/swap//
