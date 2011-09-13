@@ -8,14 +8,18 @@ elseif has('gui_macvim')
   set transparency=5
   let g:gist_clip_command = 'pbcopy'
 
-  " Command-t for CommandT
+  " CommandT
   macmenu &File.New\ Tab key=<nop>
   map <D-t> :CommandT<CR>
+  macmenu &Tools.Make key=<nop>
+  map <D-b> :CommandTBuffer<CR>
+  macmenu &File.Open\ Tab\.\.\. key=<nop>
+  map <D-T> :CommandTFlush<CR>
 
   " Command-/ to toggle comments
   map <D-/> <plug>NERDCommenterToggle<CR>
 
-  " Command-F for ack
-  macmenu Window.Toggle\ Full\ Screen\ Mode key=<nop>
-  map <D-F> :Ack<space>
+  " Ack
+  macmenu Edit.Find.Find\.\.\. key=<nop>
+  map <D-f> :Ack<space>
 endif
