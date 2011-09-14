@@ -43,8 +43,8 @@ set mouse=a
 set showmatch
 
 " bounce between brackets
-nnoremap <tab> %
-vnoremap <tab> %
+nmap <tab> %
+vmap <tab> %
 
 " show in title bar
 set title
