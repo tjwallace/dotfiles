@@ -81,6 +81,10 @@ inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 
+" start/end of line
+map H ^
+map L $
+
 " jump with J/K
 nnoremap J 5j
 vnoremap J 5j
