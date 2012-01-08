@@ -1,12 +1,13 @@
-filetype off
-call pathogen#runtime_append_all_bundles()
+" load pathogen
+runtime bundle/pathogen/autoload/pathogen.vim
+call pathogen#infect()
+
+filetype plugin indent on
 
 set nocompatible
-
 set number
 set ruler
-syntax on
-
+syntax enable
 set encoding=utf-8
 
 " leader character
@@ -18,23 +19,18 @@ set shiftwidth=2
 set smarttab
 set expandtab
 set list listchars=tab:▸\ ,trail:·
-if has("autocmd")
-  filetype plugin indent on
-endif
-
-" folding
-set foldmethod=syntax
-set foldnestmax=3
-set foldlevelstart=3
 
 " backups
 set backupdir=~/.vim/tmp/backup//
 set directory=~/.vim/tmp/swap//
 set backup
 
-" tab completion
+" files to ignore
 set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
+set wildignore+=*.o,*.obj,*.rbc,*.class,vendor/gems/*
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
+set wildignore+=*.jpg,*.jpeg,*.gif,*.png
+set wildignore+=*.zip,*.apk
 
 " allow mouse clicks
 set mouse=a
@@ -45,12 +41,10 @@ set showmatch
 " bounce between brackets
 nmap <tab> %
 vmap <tab> %
+runtime! macros/matchit.vim
 
 " show in title bar
 set title
-
-" status bar
-set laststatus=2
 
 " search
 set hlsearch
@@ -129,12 +123,6 @@ map <leader>n :NERDTreeToggle<cr>
 map <leader>N :NERDTreeFind<cr>
 let NERDTreeIgnore=['.vim$', '\~$']
 
-" rainbow parens
-nmap <leader>R :RainbowParenthesesToggle<CR>
-
-" gundo
-nnoremap <F3> :GundoToggle<CR>
-
 " copy to clipboard
 vmap <leader>y "+y
 " copy current line to clipboard
@@ -148,23 +136,6 @@ nmap <leader>r :registers<CR>
 let g:yankring_history_dir = '~/.vim/tmp'
 let g:yankring_history_file = 'yankring_history'
 
-" leader shortcuts for Rails commands
-map <Leader>m :Rmodel
-map <Leader>c :Rcontroller
-map <Leader>v :Rview
-map <Leader>u :Runittest
-map <Leader>f :Rfunctionaltest
-map <Leader>tm :RTmodel
-map <Leader>tc :RTcontroller
-map <Leader>tv :RTview
-map <Leader>tu :RTunittest
-map <Leader>tf :RTfunctionaltest
-map <Leader>sm :RSmodel
-map <Leader>sc :RScontroller
-map <Leader>sv :RSview
-map <Leader>su :RSunittest
-map <Leader>sf :RSfunctionaltest
-
 " fix issues with screen and ctrl+left/right
 set term=xterm
 
@@ -175,12 +146,32 @@ hi CursorLine cterm=NONE ctermbg=black
 " add json syntax highlighting
 au BufNewFile,BufRead *.json set ft=javascript
 
-" Thorfile, Rakefile, Vagrantfile and Gemfile are ruby
-au BufNewFile,BufRead {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
+" enabled spell checking in git commit
+autocmd FileType gitcommit setlocal spell
 
-" enable syntastic syntax checking
+" syntastic
 let g:syntastic_enable_signs=1
-let g:syntastic_quiet_warnings=1
+let g:syntastic_quiet_warnings=0
+let g:syntastic_auto_loc_list=2
 
-" better % support
-runtime! macros/matchit.vim
+" status bar
+if has("statusline") && !&cp
+  set laststatus=2  " always show the status bar
+
+  " Start the status line
+  set statusline=%f\ %m\ %r
+
+  " Add fugitive
+  set statusline+=%{fugitive#statusline()}\ 
+
+  " Add syntastic
+  set statusline+=%#warningmsg#
+  set statusline+=%{SyntasticStatuslineFlag()}
+  set statusline+=%*
+
+  " Finish the statusline
+  set statusline+=Line:%l/%L\ [%p%%]\ 
+  set statusline+=Col:%v\ 
+  set statusline+=Buf:#%n\ 
+  set statusline+=[%b][0x%B]
+endif
