@@ -70,3 +70,9 @@
 [submodule "vim/bundle/delimitMate"]
 	path = vim/bundle/delimitMate
 	url = git://github.com/Raimondi/delimitMate.git
+[submodule "vim/bundle/rspec"]
+	path = vim/bundle/rspec
+	url = git://github.com/skwp/vim-rspec.git
+[submodule "vim/bundle/scss"]
+	path = vim/bundle/scss
+	url = git://github.com/cakebaker/scss-syntax.vim.git

@@ -28,13 +28,18 @@ I use [solarized](https://github.com/altercation/vim-colors-solarized).
 * [delimitMate](https://github.com/Raimondi/delimitMate) - automatic closing of quotes, parenthesis, brackets, etc
 * [ack](https://github.com/mileszs/ack.vim)
 * [fugitive](https://github.com/tpope/vim-fugitive) - git functions
-* [git](https://github.com/tpope/vim-git)
+* [css-color](https://github.com/skammer/vim-css-color)
 * [gist](https://github.com/mattn/gist-vim)
+
+### Languages
+
+* [git](https://github.com/tpope/vim-git)
 * [ruby](https://github.com/vim-ruby/vim-ruby)
 * [bundler](https://github.com/tpope/vim-bundler)
+* [rspec](https://github.com/skwp/vim-rspec)
 * [rails](https://github.com/tpope/vim-rails)
 * [haml](https://github.com/tpope/vim-haml)
-* [css-color](https://github.com/skammer/vim-css-color)
+* [scss](https://github.com/cakebaker/scss-syntax.vim)
 
 *Check for more in [`vim/bundle`](https://github.com/tjwallace/dotfiles/tree/master/vim/bundle)*
 
