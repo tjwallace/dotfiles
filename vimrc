@@ -170,8 +170,6 @@ if has("statusline") && !&cp
   set statusline+=%*
 
   " Finish the statusline
-  set statusline+=Line:%l/%L\ [%p%%]\ 
-  set statusline+=Col:%v\ 
-  set statusline+=Buf:#%n\ 
+  set statusline+=%l:%v\ /\ %L\ [%p%%]\ 
   set statusline+=[%b][0x%B]
 endif
