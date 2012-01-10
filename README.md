@@ -40,6 +40,7 @@ I use [solarized](https://github.com/altercation/vim-colors-solarized).
 * [rails](https://github.com/tpope/vim-rails)
 * [haml](https://github.com/tpope/vim-haml)
 * [scss](https://github.com/cakebaker/scss-syntax.vim)
+* [markdown](https://github.com/tpope/vim-markdown)
 
 *Check for more in [`vim/bundle`](https://github.com/tjwallace/dotfiles/tree/master/vim/bundle)*
 
