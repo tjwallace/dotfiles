@@ -93,3 +93,6 @@
 [submodule "vim/bundle/langs/javascript"]
 	path = vim/bundle/langs/javascript
 	url = git://github.com/pangloss/vim-javascript.git
+[submodule "vim/bundle/langs/csv"]
+	path = vim/bundle/langs/csv
+	url = git://github.com/vim-scripts/csv.vim.git
