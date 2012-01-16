@@ -159,3 +159,6 @@ let g:syntastic_auto_loc_list=2
 
 " tagbar
 map <leader>rt :TagbarToggle<cr>
+
+" ctrlp
+let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
