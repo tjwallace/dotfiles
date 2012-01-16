@@ -44,6 +44,7 @@ Clone the repository to a location of your choosing and run `rake install`.
 * [markdown](https://github.com/tpope/vim-markdown)
 * [javascript](https://github.com/pangloss/vim-javascript)
 * [csv](https://github.com/vim-scripts/csv.vim)
+* [coffeescript](https://github.com/kchmck/vim-coffee-script)
 
 *Check for more in [`vim/bundle`](https://github.com/tjwallace/dotfiles/tree/master/vim/bundle)*
 

@@ -96,3 +96,6 @@
 [submodule "vim/bundle/langs/csv"]
 	path = vim/bundle/langs/csv
 	url = git://github.com/vim-scripts/csv.vim.git
+[submodule "vim/bundle/langs/coffeescript"]
+	path = vim/bundle/langs/coffeescript
+	url = git://github.com/kchmck/vim-coffee-script.git
