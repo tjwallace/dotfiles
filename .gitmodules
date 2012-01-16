@@ -1,81 +1,89 @@
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
 	url = git@github.com:tjwallace/oh-my-zsh.git
-[submodule "vim/bundle/pathogen"]
-	path = vim/bundle/pathogen
+
+# core
+[submodule "vim/bundle/core/pathogen"]
+	path = vim/bundle/core/pathogen
 	url = git://github.com/tpope/vim-pathogen.git
-[submodule "vim/bundle/fugitive"]
-	path = vim/bundle/fugitive
-	url = git://github.com/tpope/vim-fugitive.git
-[submodule "vim/bundle/ctrlp"]
-	path = vim/bundle/ctrlp
-	url = git://github.com/kien/ctrlp.vim.git
-[submodule "vim/bundle/pasta"]
-	path = vim/bundle/pasta
-	url = git://github.com/sickill/vim-pasta.git
-[submodule "vim/bundle/nerdtree"]
-	path = vim/bundle/nerdtree
-	url = git://github.com/scrooloose/nerdtree.git
-[submodule "vim/bundle/rails"]
-	path = vim/bundle/rails
-	url = git://github.com/tpope/vim-rails.git
-[submodule "vim/bundle/haml"]
-	path = vim/bundle/haml
-	url = git://github.com/tpope/vim-haml.git
-[submodule "vim/bundle/bufexplorer"]
-	path = vim/bundle/bufexplorer
-	url = git://github.com/corntrace/bufexplorer.git
-[submodule "vim/bundle/surround"]
-	path = vim/bundle/surround
-	url = git://github.com/tpope/vim-surround.git
-[submodule "vim/bundle/endwise"]
-	path = vim/bundle/endwise
-	url = git://github.com/tpope/vim-endwise.git
-[submodule "vim/bundle/commentary"]
-	path = vim/bundle/commentary
-	url = git://github.com/tpope/vim-commentary.git
-[submodule "vim/bundle/repeat"]
-	path = vim/bundle/repeat
-	url = git://github.com/tpope/vim-repeat.git
-[submodule "vim/bundle/git"]
-	path = vim/bundle/git
-	url = git://github.com/tpope/vim-git.git
-[submodule "vim/bundle/ruby"]
-	path = vim/bundle/ruby
-	url = git://github.com/vim-ruby/vim-ruby.git
-[submodule "vim/bundle/solarized"]
-	path = vim/bundle/solarized
+
+# colors
+[submodule "vim/bundle/colors/solarized"]
+	path = vim/bundle/colors/solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
-[submodule "vim/bundle/indent-guides"]
-	path = vim/bundle/indent-guides
+
+# tools
+[submodule "vim/bundle/tools/fugitive"]
+	path = vim/bundle/tools/fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule "vim/bundle/tools/ctrlp"]
+	path = vim/bundle/tools/ctrlp
+	url = git://github.com/kien/ctrlp.vim.git
+[submodule "vim/bundle/tools/pasta"]
+	path = vim/bundle/tools/pasta
+	url = git://github.com/sickill/vim-pasta.git
+[submodule "vim/bundle/tools/nerdtree"]
+	path = vim/bundle/tools/nerdtree
+	url = git://github.com/scrooloose/nerdtree.git
+[submodule "vim/bundle/tools/bufexplorer"]
+	path = vim/bundle/tools/bufexplorer
+	url = git://github.com/corntrace/bufexplorer.git
+[submodule "vim/bundle/tools/surround"]
+	path = vim/bundle/tools/surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule "vim/bundle/tools/endwise"]
+	path = vim/bundle/tools/endwise
+	url = git://github.com/tpope/vim-endwise.git
+[submodule "vim/bundle/tools/commentary"]
+	path = vim/bundle/tools/commentary
+	url = git://github.com/tpope/vim-commentary.git
+[submodule "vim/bundle/tools/repeat"]
+	path = vim/bundle/tools/repeat
+	url = git://github.com/tpope/vim-repeat.git
+[submodule "vim/bundle/tools/indent-guides"]
+	path = vim/bundle/tools/indent-guides
 	url = git://github.com/nathanaelkane/vim-indent-guides.git
-[submodule "vim/bundle/syntastic"]
-	path = vim/bundle/syntastic
+[submodule "vim/bundle/tools/syntastic"]
+	path = vim/bundle/tools/syntastic
 	url = git://github.com/scrooloose/syntastic.git
-[submodule "vim/bundle/ack"]
-	path = vim/bundle/ack
+[submodule "vim/bundle/tools/ack"]
+	path = vim/bundle/tools/ack
 	url = git://github.com/mileszs/ack.vim.git
-[submodule "vim/bundle/bundler"]
-	path = vim/bundle/bundler
-	url = git://github.com/tpope/vim-bundler.git
-[submodule "vim/bundle/gist"]
-	path = vim/bundle/gist
+[submodule "vim/bundle/tools/gist"]
+	path = vim/bundle/tools/gist
 	url = git://github.com/mattn/gist-vim.git
-[submodule "vim/bundle/supertab"]
-	path = vim/bundle/supertab
+[submodule "vim/bundle/tools/supertab"]
+	path = vim/bundle/tools/supertab
 	url = git://github.com/ervandew/supertab.git
-[submodule "vim/bundle/css-color"]
-	path = vim/bundle/css-color
+[submodule "vim/bundle/tools/css-color"]
+	path = vim/bundle/tools/css-color
 	url = git://github.com/skammer/vim-css-color.git
-[submodule "vim/bundle/delimitMate"]
-	path = vim/bundle/delimitMate
+[submodule "vim/bundle/tools/delimitMate"]
+	path = vim/bundle/tools/delimitMate
 	url = git://github.com/Raimondi/delimitMate.git
-[submodule "vim/bundle/rspec"]
-	path = vim/bundle/rspec
+
+# langs
+[submodule "vim/bundle/langs/git"]
+	path = vim/bundle/langs/git
+	url = git://github.com/tpope/vim-git.git
+[submodule "vim/bundle/langs/ruby"]
+	path = vim/bundle/langs/ruby
+	url = git://github.com/vim-ruby/vim-ruby.git
+[submodule "vim/bundle/langs/rails"]
+	path = vim/bundle/langs/rails
+	url = git://github.com/tpope/vim-rails.git
+[submodule "vim/bundle/langs/haml"]
+	path = vim/bundle/langs/haml
+	url = git://github.com/tpope/vim-haml.git
+[submodule "vim/bundle/langs/rspec"]
+	path = vim/bundle/langs/rspec
 	url = git://github.com/skwp/vim-rspec.git
-[submodule "vim/bundle/scss"]
-	path = vim/bundle/scss
+[submodule "vim/bundle/langs/scss"]
+	path = vim/bundle/langs/scss
 	url = git://github.com/cakebaker/scss-syntax.vim.git
-[submodule "vim/bundle/markdown"]
-	path = vim/bundle/markdown
+[submodule "vim/bundle/langs/markdown"]
+	path = vim/bundle/langs/markdown
 	url = git://github.com/tpope/vim-markdown.git
+[submodule "vim/bundle/langs/bundler"]
+	path = vim/bundle/langs/bundler
+	url = git://github.com/tpope/vim-bundler.git
