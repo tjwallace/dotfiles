@@ -90,3 +90,6 @@
 [submodule "vim/bundle/langs/bundler"]
 	path = vim/bundle/langs/bundler
 	url = git://github.com/tpope/vim-bundler.git
+[submodule "vim/bundle/langs/javascript"]
+	path = vim/bundle/langs/javascript
+	url = git://github.com/pangloss/vim-javascript.git

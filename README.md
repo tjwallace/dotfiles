@@ -42,6 +42,7 @@ Clone the repository to a location of your choosing and run `rake install`.
 * [haml](https://github.com/tpope/vim-haml)
 * [scss](https://github.com/cakebaker/scss-syntax.vim)
 * [markdown](https://github.com/tpope/vim-markdown)
+* [javascript](https://github.com/pangloss/vim-javascript)
 
 *Check for more in [`vim/bundle`](https://github.com/tjwallace/dotfiles/tree/master/vim/bundle)*
 
