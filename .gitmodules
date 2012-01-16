@@ -64,6 +64,9 @@
 [submodule "vim/bundle/tools/delimitMate"]
 	path = vim/bundle/tools/delimitMate
 	url = git://github.com/Raimondi/delimitMate.git
+[submodule "vim/bundle/tools/easymotion"]
+	path = vim/bundle/tools/easymotion
+	url = git://github.com/Lokaltog/vim-easymotion.git
 
 # langs
 [submodule "vim/bundle/langs/git"]
