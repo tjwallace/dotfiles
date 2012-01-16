@@ -32,6 +32,7 @@ Clone the repository to a location of your choosing and run `rake install`.
 * [css-color](https://github.com/skammer/vim-css-color)
 * [gist](https://github.com/mattn/gist-vim)
 * [easymotion](https://github.com/Lokaltog/vim-easymotion)
+* [tagbar](https://github.com/majutsushi/tagbar.git)
 
 ### Languages
 

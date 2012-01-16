@@ -156,6 +156,9 @@ let g:syntastic_enable_signs=1
 let g:syntastic_quiet_warnings=0
 let g:syntastic_auto_loc_list=2
 
+" tagbar
+map <leader>rt :TagbarToggle<cr>
+
 " status bar
 if has("statusline") && !&cp
   set laststatus=2  " always show the status bar
