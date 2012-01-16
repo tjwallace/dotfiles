@@ -70,6 +70,9 @@
 [submodule "vim/bundle/tools/tagbar"]
 	path = vim/bundle/tools/tagbar
 	url = git://github.com/majutsushi/tagbar.git
+[submodule "vim/bundle/tools/powerline"]
+	path = vim/bundle/tools/powerline
+	url = git://github.com/Lokaltog/vim-powerline.git
 
 # langs
 [submodule "vim/bundle/langs/git"]

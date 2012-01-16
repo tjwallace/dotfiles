@@ -11,6 +11,7 @@ set number
 set ruler
 syntax enable
 set encoding=utf-8
+set laststatus=2 " always show the status bar
 
 " leader character
 let mapleader = ","
@@ -158,23 +159,3 @@ let g:syntastic_auto_loc_list=2
 
 " tagbar
 map <leader>rt :TagbarToggle<cr>
-
-" status bar
-if has("statusline") && !&cp
-  set laststatus=2  " always show the status bar
-
-  " Start the status line
-  set statusline=%f\ %m\ %r
-
-  " Add fugitive
-  set statusline+=%{fugitive#statusline()}\ 
-
-  " Add syntastic
-  set statusline+=%#warningmsg#
-  set statusline+=%{SyntasticStatuslineFlag()}
-  set statusline+=%*
-
-  " Finish the statusline
-  set statusline+=%l:%v\ /\ %L\ [%p%%]\ 
-  set statusline+=[%b][0x%B]
-endif
