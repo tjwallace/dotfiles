@@ -11,6 +11,9 @@
 [submodule "vim/bundle/colors/solarized"]
 	path = vim/bundle/colors/solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "vim/bundle/colors/molokai"]
+	path = vim/bundle/colors/molokai
+	url = git://github.com/vim-scripts/molokai.git
 
 # tools
 [submodule "vim/bundle/tools/fugitive"]

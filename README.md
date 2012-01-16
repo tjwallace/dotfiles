@@ -8,9 +8,10 @@ Clone the repository to a location of your choosing and run `rake install`.
 
 ## Vim
 
-### Colorscheme
+### Colorschemes
 
-I use [solarized](https://github.com/altercation/vim-colors-solarized).
+* [solarized](https://github.com/altercation/vim-colors-solarized) - current default
+* [molokai](https://github.com/vim-scripts/molokai)
 
 ### Plugins
 
