@@ -34,6 +34,7 @@ Clone the repository to a location of your choosing and run `rake install`.
 * [easymotion](https://github.com/Lokaltog/vim-easymotion)
 * [tagbar](https://github.com/majutsushi/tagbar.git)
 * [powerline](https://github.com/Lokaltog/vim-powerline)
+* [yankring](https://github.com/vim-scripts/YankRing.vim)
 
 ### Languages
 

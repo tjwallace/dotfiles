@@ -73,6 +73,9 @@
 [submodule "vim/bundle/tools/powerline"]
 	path = vim/bundle/tools/powerline
 	url = git://github.com/Lokaltog/vim-powerline.git
+[submodule "vim/bundle/tools/yankring"]
+	path = vim/bundle/tools/yankring
+	url = git://github.com/vim-scripts/YankRing.vim.git
 
 # langs
 [submodule "vim/bundle/langs/git"]
