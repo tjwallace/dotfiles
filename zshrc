@@ -8,7 +8,7 @@ ZSH_THEME="bira"
 DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(brew bundler gem git rake vagrant)
+plugins=(brew bundler gem git rake)
 
 source $ZSH/oh-my-zsh.sh
 
