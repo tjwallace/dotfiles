@@ -162,3 +162,4 @@ map <leader>rt :TagbarToggle<cr>
 
 " ctrlp
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
+let g:ctrlp_clear_cache_on_exit = 1
