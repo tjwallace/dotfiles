@@ -8,7 +8,7 @@ ZSH_THEME="bira"
 DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(brew bundler gem git)
+plugins=(brew bundler gem git rbenv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -16,8 +16,6 @@ alias ll='ls -lh'
 alias l='ls -lah'
 alias b='bundle exec'
 alias brake='bundle exec rake'
-
-export PATH=/usr/local/bin:$PATH
 
 # Ctrl+left/right
 bindkey '5D' emacs-backward-word
