@@ -31,7 +31,6 @@ set backup
 " files to ignore
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,*.rbc,*.class,vendor/gems/*
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 set wildignore+=*.jpg,*.jpeg,*.gif,*.png
 set wildignore+=*.zip,*.apk
 
@@ -163,6 +162,7 @@ map <leader>rt :TagbarToggle<cr>
 " ctrlp
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
 let g:ctrlp_clear_cache_on_exit = 1
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
 " ack
 if executable('ack-grep')
