@@ -12,6 +12,9 @@ plugins=(brew bundler gem git rbenv)
 
 source $ZSH/oh-my-zsh.sh
 
+# homebrew only
+[[ `uname` == "Darwin" ]] && export PATH=/usr/local/bin:$PATH
+
 alias ll='ls -lh'
 alias l='ls -lah'
 alias b='bundle exec'
