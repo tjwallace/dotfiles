@@ -18,7 +18,6 @@ source $ZSH/oh-my-zsh.sh
 alias ll='ls -lh'
 alias l='ls -lah'
 alias b='bundle exec'
-alias brake='bundle exec rake'
 
 # Ctrl+left/right
 bindkey '5D' emacs-backward-word
