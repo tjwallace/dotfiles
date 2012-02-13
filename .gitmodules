@@ -76,6 +76,9 @@
 [submodule "vim/bundle/tools/yankring"]
 	path = vim/bundle/tools/yankring
 	url = git://github.com/vim-scripts/YankRing.vim.git
+[submodule "vim/bundle/tools/rename2"]
+	path = vim/bundle/tools/rename2
+	url = git://github.com/vim-scripts/Rename2.git
 
 # langs
 [submodule "vim/bundle/langs/git"]
