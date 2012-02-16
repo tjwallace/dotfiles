@@ -19,16 +19,16 @@ alias ll='ls -lh'
 alias l='ls -lah'
 alias b='bundle exec'
 
-# Ctrl+left/right
-bindkey '5D' emacs-backward-word
-bindkey '5C' emacs-forward-word
-
 # use most as pager if available
 if which most > /dev/null; then
   export PAGER=most
 fi
 
 export EDITOR=vim
+
+# ctrl+left/right
+bindkey '5D' emacs-backward-word
+bindkey '5C' emacs-forward-word
 
 # history search up and down
 bindkey '^[[A' history-beginning-search-backward
