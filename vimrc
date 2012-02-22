@@ -12,6 +12,7 @@ set ruler
 syntax enable
 set encoding=utf-8
 set laststatus=2 " always show the status bar
+set backspace=start,eol,indent
 
 " leader character
 let mapleader = ","
