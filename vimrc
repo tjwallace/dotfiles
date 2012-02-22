@@ -136,9 +136,6 @@ nmap <leader>p "+gP
 " show the registers from things cut/yanked
 nmap <leader>r :registers<CR>
 
-let g:yankring_history_dir = '~/.vim/tmp'
-let g:yankring_history_file = 'yankring_history'
-
 " fix issues with screen and ctrl+left/right
 set term=xterm
 
@@ -169,3 +166,7 @@ let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 if executable('ack-grep')
   let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 endif
+
+" yankring
+let g:yankring_history_dir = '~/.vim/tmp'
+let g:yankring_history_file = 'yankring_history'
