@@ -34,15 +34,5 @@ bindkey '5C' emacs-forward-word
 bindkey '^[[A' history-beginning-search-backward
 bindkey '^[[B' history-beginning-search-forward
 
-# tweaks for ruby
-export RUBY_HEAP_MIN_SLOTS=500000
-export RUBY_HEAP_SLOTS_INCREMENT=250000
-export RUBY_GC_MALLOC_LIMIT=50000000
-export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
-
-# chef
-export OPSCODE_USER=jwallace_pp
-export OPSCODE_ORGNAME=partnerpedia
-
-# RVM
+# rvm
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
