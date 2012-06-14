@@ -12,6 +12,9 @@ plugins=(autojump brew bundler gem git rbenv vagrant knife)
 
 source $ZSH/oh-my-zsh.sh
 
+# disable autocorrect
+unsetopt correct_all
+
 # homebrew only
 [[ `uname` == "Darwin" ]] && export PATH=/usr/local/bin:$PATH
 
