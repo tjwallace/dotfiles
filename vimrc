@@ -82,12 +82,6 @@ inoremap <right> <nop>
 map H ^
 map L $
 
-" jump with J/K
-nnoremap J 5j
-vnoremap J 5j
-nnoremap K 5k
-vnoremap K 5k
-
 " shorcuts
 nnoremap ; :
 inoremap jj <ESC>
