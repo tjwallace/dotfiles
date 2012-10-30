@@ -114,3 +114,6 @@
 [submodule "vim/bundle/langs/coffeescript"]
 	path = vim/bundle/langs/coffeescript
 	url = git://github.com/kchmck/vim-coffee-script.git
+[submodule "vim/bundle/langs/cucumber"]
+	path = vim/bundle/langs/cucumber
+	url = git://github.com/tpope/vim-cucumber.git
