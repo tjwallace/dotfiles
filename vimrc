@@ -60,7 +60,7 @@ nnoremap <leader><space> :noh<cr>
 set linebreak
 
 " colorscheme
-set background=dark
+set background=light
 colorscheme solarized
 
 " make cursor move by visual lines instead of file lines (when wrapping)
@@ -135,7 +135,6 @@ set term=xterm
 
 " highlight current line
 set cursorline
-hi CursorLine cterm=NONE ctermbg=black
 
 " add json syntax highlighting
 au BufNewFile,BufRead *.json set ft=javascript
