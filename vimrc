@@ -159,6 +159,10 @@ let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 if executable('ack-grep')
   let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 endif
+if executable("ag")
+  " https://github.com/ggreer/the_silver_searcher
+  let g:ackprg = 'ag --nogroup --nocolor --column'
+endif
 
 " yankring
 let g:yankring_history_dir = '~/.vim/tmp'
