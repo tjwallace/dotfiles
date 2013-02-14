@@ -151,7 +151,13 @@ let g:syntastic_auto_loc_list=2
 map <leader>rt :TagbarToggle<cr>
 
 " ctrlp
-let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
+let g:ctrlp_user_command = {
+  \ 'types': {
+    \ 1: ['.git', 'cd %s && git ls-files'],
+    \ 2: ['.hg', 'hg --cwd %s locate -I .'],
+    \ },
+  \ 'fallback': 'find %s -type f'
+\ }
 let g:ctrlp_clear_cache_on_exit = 1
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
