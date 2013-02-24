@@ -126,3 +126,6 @@
 [submodule "vim/bundle/langs/play"]
 	path = vim/bundle/langs/play
 	url = git://github.com/gre/play2vim.git
+[submodule "vim/bundle/tools/rbenv"]
+	path = vim/bundle/tools/rbenv
+	url = git://github.com/tpope/vim-rbenv.git
