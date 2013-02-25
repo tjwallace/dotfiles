@@ -60,7 +60,9 @@ nnoremap <leader><space> :noh<cr>
 set linebreak
 
 " colorscheme
-set background=light
+set background=dark
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
 colorscheme solarized
 
 " make cursor move by visual lines instead of file lines (when wrapping)
