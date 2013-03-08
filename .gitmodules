@@ -129,3 +129,6 @@
 [submodule "vim/bundle/tools/rbenv"]
 	path = vim/bundle/tools/rbenv
 	url = git://github.com/tpope/vim-rbenv.git
+[submodule "vim/bundle/tools/gitgutter"]
+	path = vim/bundle/tools/gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
