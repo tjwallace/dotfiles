@@ -18,6 +18,9 @@ unsetopt correct_all
 # homebrew only
 [[ `uname` == "Darwin" ]] && export PATH=/usr/local/bin:$PATH
 
+# nodejs / npm
+[[ -d "/usr/local/share/npm/bin" ]] && export PATH=/usr/local/share/npm/bin:$PATH
+
 alias ll='ls -lh'
 alias l='ls -lah'
 alias b='bundle exec'
