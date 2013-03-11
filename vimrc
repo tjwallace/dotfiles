@@ -138,9 +138,6 @@ set term=xterm
 " highlight current line
 set cursorline
 
-" add json syntax highlighting
-au BufNewFile,BufRead *.json set ft=javascript
-
 " enabled spell checking in git commit
 autocmd FileType gitcommit setlocal spell
 
