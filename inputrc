@@ -1,9 +1,11 @@
 # One tab press for possible completions
 set show-all-if-ambiguous on
 
-# Up and down do history search
-"\e[A":history-search-backward
-"\e[B":history-search-forward
+# Up and down history search
+$if Bash
+  "\e[B": history-search-forward
+  "\e[A": history-search-backward
+$endif]"
 
 # mappings for Ctrl-left-arrow and Ctrl-right-arrow for word moving
 "\e[1;5C": forward-word
