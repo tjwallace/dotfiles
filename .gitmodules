@@ -132,3 +132,6 @@
 [submodule "vim/bundle/tools/gitgutter"]
 	path = vim/bundle/tools/gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "vim/bundle/tools/dispatch"]
+	path = vim/bundle/tools/dispatch
+	url = git://github.com/tpope/vim-dispatch.git
