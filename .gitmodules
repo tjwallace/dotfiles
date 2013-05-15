@@ -135,3 +135,6 @@
 [submodule "vim/bundle/tools/dispatch"]
 	path = vim/bundle/tools/dispatch
 	url = git://github.com/tpope/vim-dispatch.git
+[submodule "vim/bundle/langs/slim"]
+	path = vim/bundle/langs/slim
+	url = git://github.com/slim-template/vim-slim.git
