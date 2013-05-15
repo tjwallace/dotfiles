@@ -8,7 +8,7 @@ ZSH_THEME="bira"
 DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(autojump brew bundler gem git vagrant knife)
+plugins=(autojump brew gem git vagrant knife)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -23,7 +23,7 @@ unsetopt correct_all
 
 alias ll='ls -lh'
 alias l='ls -lah'
-alias b='bundle exec'
+alias bi='bundle install --binstubs=.bin'
 
 # use most as pager if available
 if which most > /dev/null; then
