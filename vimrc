@@ -60,7 +60,7 @@ nnoremap <leader><space> :noh<cr>
 set linebreak
 
 " colorscheme
-set background=dark
+set background=light
 let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 colorscheme solarized
