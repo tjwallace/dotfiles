@@ -135,3 +135,6 @@
 [submodule "vim/bundle/tools/airline"]
 	path = vim/bundle/tools/airline
 	url = https://github.com/bling/vim-airline.git
+[submodule "vim/bundle/tools/signify"]
+	path = vim/bundle/tools/signify
+	url = https://github.com/mhinz/vim-signify.git
