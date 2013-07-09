@@ -135,3 +135,6 @@
 [submodule "vim/bundle/langs/slim"]
 	path = vim/bundle/langs/slim
 	url = git://github.com/slim-template/vim-slim.git
+[submodule "vim/bundle/tools/airline"]
+	path = vim/bundle/tools/airline
+	url = https://github.com/bling/vim-airline.git
