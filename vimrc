@@ -1,8 +1,8 @@
 " load pathogen
 runtime bundle/core/pathogen/autoload/pathogen.vim
-call pathogen#infect('~/.dotfiles/vim/bundle/tools')
-call pathogen#infect('~/.dotfiles/vim/bundle/langs')
-call pathogen#infect('~/.dotfiles/vim/bundle/colors')
+call pathogen#infect('~/.dotfiles/vim/bundle/tools/{}')
+call pathogen#infect('~/.dotfiles/vim/bundle/langs/{}')
+call pathogen#infect('~/.dotfiles/vim/bundle/colors/{}')
 
 filetype plugin indent on
 
