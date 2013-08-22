@@ -138,3 +138,15 @@
 [submodule "vim/bundle/tools/signify"]
 	path = vim/bundle/tools/signify
 	url = https://github.com/mhinz/vim-signify.git
+[submodule "vim/bundle/tools/snipmate"]
+	path = vim/bundle/tools/snipmate
+	url = https://github.com/garbas/vim-snipmate.git
+[submodule "vim/bundle/tools/snippets"]
+	path = vim/bundle/tools/snippets
+	url = https://github.com/honza/vim-snippets.git
+[submodule "vim/bundle/tools/addon-mw-utils"]
+	path = vim/bundle/tools/addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "vim/bundle/tools/tlib"]
+	path = vim/bundle/tools/tlib
+	url = https://github.com/tomtom/tlib_vim.git
