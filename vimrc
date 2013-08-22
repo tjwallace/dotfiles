@@ -15,7 +15,7 @@ set laststatus=2 " always show the status bar
 set backspace=start,eol,indent
 
 " leader character
-let mapleader = ","
+let mapleader = "\\"
 
 " whitespace
 set tabstop=2
