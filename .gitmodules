@@ -90,9 +90,6 @@
 [submodule "vim/bundle/langs/haml"]
 	path = vim/bundle/langs/haml
 	url = git://github.com/tpope/vim-haml.git
-[submodule "vim/bundle/langs/rspec"]
-	path = vim/bundle/langs/rspec
-	url = git://github.com/skwp/vim-rspec.git
 [submodule "vim/bundle/langs/scss"]
 	path = vim/bundle/langs/scss
 	url = git://github.com/cakebaker/scss-syntax.vim.git
