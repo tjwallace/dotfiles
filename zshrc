@@ -1,3 +1,13 @@
+# homebrew only
+[[ `uname` == "Darwin" ]] && export PATH=/usr/local/bin:$PATH
+
+# nodejs / npm
+[[ -d "/usr/local/share/npm/bin" ]] && export PATH=/usr/local/share/npm/bin:$PATH
+
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -14,12 +24,6 @@ source $ZSH/oh-my-zsh.sh
 
 # disable autocorrect
 unsetopt correct_all
-
-# homebrew only
-[[ `uname` == "Darwin" ]] && export PATH=/usr/local/bin:$PATH
-
-# nodejs / npm
-[[ -d "/usr/local/share/npm/bin" ]] && export PATH=/usr/local/share/npm/bin:$PATH
 
 alias ll='ls -lh'
 alias l='ls -lah'
