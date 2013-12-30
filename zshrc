@@ -39,3 +39,8 @@ bindkey '5C' emacs-forward-word
 # history search up and down
 bindkey '^[[A' history-beginning-search-backward
 bindkey '^[[B' history-beginning-search-forward
+
+# alias hub to git
+if which hub > /dev/null; then
+  eval "$(hub alias -s)"
+fi
