@@ -1,6 +1,79 @@
-filetype plugin indent on
-
+" BEGIN VUNDLE
 set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+
+" Colors
+Plugin 'altercation/vim-colors-solarized'
+
+" Tools
+Plugin 'bling/vim-airline'
+Plugin 'skammer/vim-css-color'
+Plugin 'tpope/vim-dispatch'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'tpope/vim-rbenv'
+Plugin 'vim-scripts/Rename2'
+Plugin 'scrooloose/syntastic'
+Plugin 'majutsushi/tagbar'
+Plugin 'vim-scripts/YankRing.vim'
+
+" Tools - Search
+Plugin 'scrooloose/nerdtree'
+Plugin 'mileszs/ack.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'corntrace/bufexplorer'
+
+" Tools - Git
+Plugin 'tpope/vim-fugitive'
+Plugin 'mhinz/vim-signify'
+
+" Tools - Tab Completion
+Plugin 'ervandew/supertab'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+
+" Tools - Formatting
+Plugin 'Raimondi/delimitMate'
+Plugin 'sickill/vim-pasta'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+
+" Languages
+Plugin 'vim-scripts/csv.vim'
+Plugin 'tpope/vim-git'
+Plugin 'tpope/vim-markdown'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'gre/play2vim'
+
+" Languages - Ruby
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-rails'
+Plugin 'slim-template/vim-slim'
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-cucumber'
+
+" Languages - Web
+Plugin 'othree/html5.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'burnettk/vim-angular'
+
+call vundle#end()
+filetype plugin indent on
+" END VUNDLE
+
 set number
 set ruler
 syntax enable
@@ -57,7 +130,7 @@ set linebreak
 set background=light
 let g:solarized_contrast="high"
 let g:solarized_visibility="high"
-" colorscheme solarized
+colorscheme solarized
 
 " make cursor move by visual lines instead of file lines (when wrapping)
 map k gk
@@ -137,7 +210,7 @@ autocmd FileType gitcommit setlocal spell
 
 " syntastic
 let g:syntastic_enable_signs=1
-let g:syntastic_quiet_warnings=0
+let g:syntastic_quiet_messages = {'level': 'warnings'}
 let g:syntastic_auto_loc_list=2
 
 " tagbar
