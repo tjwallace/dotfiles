@@ -147,3 +147,6 @@
 [submodule "vim/bundle/tools/tlib"]
 	path = vim/bundle/tools/tlib
 	url = https://github.com/tomtom/tlib_vim.git
+[submodule "vim/vim/bundle/langs/javascript-libraries-syntax"]
+	path = vim/vim/bundle/langs/javascript-libraries-syntax
+	url = https://github.com/othree/javascript-libraries-syntax.vim.git

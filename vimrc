@@ -176,3 +176,6 @@ let g:yankring_history_file = 'yankring_history'
 " airline (status line)
 let g:airline_left_sep=''
 let g:airline_right_sep=''
+
+" javascript-libraries-syntax
+let g:used_javascript_libs = 'jquery,underscore,angularjs,angularui,jasmine'
