@@ -1,9 +1,6 @@
 # homebrew only
 [[ `uname` == "Darwin" ]] && export PATH=/usr/local/bin:$PATH
 
-# nodejs / npm
-[[ -d "/usr/local/share/npm/bin" ]] && export PATH=/usr/local/share/npm/bin:$PATH
-
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
