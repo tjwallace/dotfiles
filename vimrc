@@ -62,13 +62,16 @@ Plugin 'slim-template/vim-slim'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-cucumber'
 
-" Languages - Web
-Plugin 'othree/html5.vim'
+" Languages - Yavascript
 Plugin 'pangloss/vim-javascript'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'burnettk/vim-angular'
+Plugin 'digitaltoad/vim-jade'
+
+" Languages - Web
+Plugin 'othree/html5.vim'
+Plugin 'cakebaker/scss-syntax.vim'
 
 call vundle#end()
 filetype plugin indent on
