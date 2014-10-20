@@ -22,7 +22,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'vim-scripts/YankRing.vim'
 
 " Tools - Search
-Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-vinegar'
 Plugin 'mileszs/ack.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'corntrace/bufexplorer'
@@ -186,11 +186,9 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 " sudo write
 cmap w!! w !sudo tee % >/dev/null
 
-" NERDTree
-map <F2> :NERDTreeToggle<cr>
-map <leader>n :NERDTreeToggle<cr>
-map <leader>N :NERDTreeFind<cr>
-let NERDTreeIgnore=['.vim$', '\~$']
+" netrw
+map <leader>n :e.<cr>
+map <leader>N :Explore<cr>
 
 " copy to clipboard
 vmap <leader>y "+y
