@@ -5,6 +5,10 @@
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+# go
+export GOPATH=$HOME/code/go
+export PATH=$PATH:$GOPATH/bin
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
