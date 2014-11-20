@@ -1,5 +1,10 @@
-# homebrew only
-[[ `uname` == "Darwin" ]] && export PATH=/usr/local/bin:$PATH
+# osx only
+if [[ `uname` == "Darwin" ]]; then
+  export PATH=/usr/local/bin:$PATH
+
+  export CHROME_BIN="/opt/homebrew-cask/Caskroom/google-chrome/latest/Google Chrome.app/Contents/MacOS/Google Chrome"
+  [[ -f $CHROME_BIN ]] || unset CHROME_BIN
+fi
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
