@@ -39,6 +39,7 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 
 " Tools - Formatting
+Plugin 'editorconfig/editorconfig-vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'sickill/vim-pasta'
 Plugin 'tpope/vim-commentary'
@@ -296,3 +297,6 @@ endfunction
 
 " javascript-libraries-syntax
 let g:used_javascript_libs = 'jquery,underscore,angularjs,angularui,jasmine'
+
+" editorconfig
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
