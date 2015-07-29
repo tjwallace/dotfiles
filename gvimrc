@@ -6,7 +6,6 @@ if has('gui_gtk2')
 elseif has('gui_macvim')
   set guifont=Menlo:h13
   set guioptions=aAce
-  set transparency=5
 
   let g:gist_clip_command = 'pbcopy'
 
