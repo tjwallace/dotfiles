@@ -24,7 +24,7 @@ Plugin 'vim-scripts/YankRing.vim'
 " Tools - Search
 Plugin 'tpope/vim-vinegar'
 Plugin 'mileszs/ack.vim'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'corntrace/bufexplorer'
 
 " Tools - Git
