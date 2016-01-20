@@ -134,8 +134,8 @@ shopt -s nocaseglob
 # Mult-line commands to single line in history
 shopt -s cmdhist
 
-# personal
-export PATH=~/bin:$PATH
+# homebrew
+export PATH=/usr/local/bin:$PATH
 
 # No ^C
 stty -ctlecho
