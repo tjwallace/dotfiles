@@ -12,6 +12,9 @@ fi
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+# direnv
+eval "$(direnv hook zsh)"
+
 # go
 export GOPATH=$HOME/code/go
 export PATH=$PATH:$GOPATH/bin
