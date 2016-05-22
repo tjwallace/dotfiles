@@ -210,6 +210,8 @@ autocmd FileType gitcommit setlocal spell
 " syntastic
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=2
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_ruby_mri_exec = '/Users/jeff/.rbenv/shims/ruby'
 
 " tagbar
 map <leader>rt :TagbarToggle<cr>
