@@ -201,9 +201,6 @@ nmap <leader>p "+gP
 " show the registers from things cut/yanked
 nmap <leader>r :registers<CR>
 
-" fix issues with screen and ctrl+left/right
-set term=xterm
-
 " highlight current line
 set cursorline
 
