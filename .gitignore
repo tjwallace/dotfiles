@@ -1,3 +1,4 @@
 gitconfig
 vim/.netrwhist
-vim/bundle
+vim/autoload/plug.vim
+vim/plugged

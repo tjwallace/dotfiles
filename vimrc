@@ -1,82 +1,80 @@
-" BEGIN VUNDLE
-set nocompatible
-filetype off
+" vim-plug auto install
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'gmarik/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " Colors
-Plugin 'altercation/vim-colors-solarized'
+Plug 'altercation/vim-colors-solarized'
 
 " Tools
-Plugin 'bling/vim-airline'
-Plugin 'skammer/vim-css-color'
-Plugin 'tpope/vim-dispatch'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'tpope/vim-rbenv'
-Plugin 'vim-scripts/Rename2'
-Plugin 'scrooloose/syntastic'
-Plugin 'majutsushi/tagbar'
-Plugin 'vim-scripts/YankRing.vim'
+Plug 'bling/vim-airline'
+Plug 'skammer/vim-css-color'
+Plug 'tpope/vim-dispatch'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'tpope/vim-rbenv'
+Plug 'vim-scripts/Rename2'
+Plug 'scrooloose/syntastic'
+Plug 'majutsushi/tagbar'
+Plug 'vim-scripts/YankRing.vim'
 
 " Tools - Search
-Plugin 'tpope/vim-vinegar'
-Plugin 'mileszs/ack.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'corntrace/bufexplorer'
+Plug 'tpope/vim-vinegar'
+Plug 'mileszs/ack.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'corntrace/bufexplorer'
 
 " Tools - Git
-Plugin 'tpope/vim-fugitive'
-Plugin 'mhinz/vim-signify'
+Plug 'tpope/vim-fugitive'
+Plug 'mhinz/vim-signify'
 
 " Tools - Tab Completion
-Plugin 'ervandew/supertab'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
+Plug 'ervandew/supertab'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
 
 " Tools - Formatting
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'Raimondi/delimitMate'
-Plugin 'sickill/vim-pasta'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'Raimondi/delimitMate'
+Plug 'sickill/vim-pasta'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
 
 " Languages
-Plugin 'vim-scripts/csv.vim'
-Plugin 'tpope/vim-git'
-Plugin 'tpope/vim-markdown'
-Plugin 'derekwyatt/vim-scala'
-Plugin 'gre/play2vim'
+Plug 'vim-scripts/csv.vim'
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-markdown'
+Plug 'derekwyatt/vim-scala'
+Plug 'gre/play2vim'
 
 " Languages - Ruby
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-rails'
-Plugin 'slim-template/vim-slim'
-Plugin 'tpope/vim-haml'
-Plugin 'tpope/vim-cucumber'
+Plug 'vim-ruby/vim-ruby'
+Plug 'thoughtbot/vim-rspec'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-rails'
+Plug 'slim-template/vim-slim'
+Plug 'tpope/vim-haml'
+Plug 'tpope/vim-cucumber'
 
 " Languages - Yavascript
-Plugin 'pangloss/vim-javascript'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'burnettk/vim-angular'
-Plugin 'digitaltoad/vim-jade'
+Plug 'pangloss/vim-javascript'
+Plug 'kchmck/vim-coffee-script'
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'burnettk/vim-angular'
+Plug 'digitaltoad/vim-jade'
 
 " Languages - Web
-Plugin 'othree/html5.vim'
-Plugin 'cakebaker/scss-syntax.vim'
+Plug 'othree/html5.vim'
+Plug 'cakebaker/scss-syntax.vim'
 
-call vundle#end()
-filetype plugin indent on
-" END VUNDLE
+call plug#end()
 
 set number
 set ruler
