@@ -227,11 +227,11 @@ let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
 " ack
 if executable('ack-grep')
-  let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+  let g:ackprg = 'ack-grep -H --nocolor --nogroup --column'
 endif
-if executable("ag")
+if executable('ag')
   " https://github.com/ggreer/the_silver_searcher
-  let g:ackprg = 'ag --nogroup --nocolor --column'
+  let g:ackprg = 'ag --vimgrep'
 endif
 
 " yankring
