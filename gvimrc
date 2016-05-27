@@ -18,4 +18,9 @@ elseif has('gui_macvim')
   " Ack
   macmenu Edit.Find.Find\.\.\. key=<nop>
   map <D-f> :Ack<space>
+
+  map <D-j> :cn<CR>
+  imap <D-j> <ESC>:cn<CR>
+  map <D-k> :cp<CR>
+  imap <D-k> <ESC>:cp<CR>
 endif
