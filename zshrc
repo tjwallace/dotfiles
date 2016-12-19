@@ -9,7 +9,6 @@ if [[ `uname` == "Darwin" ]]; then
 fi
 
 # rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # direnv
