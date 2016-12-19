@@ -53,6 +53,7 @@ Plug 'tpope/vim-git'
 Plug 'tpope/vim-markdown'
 Plug 'derekwyatt/vim-scala'
 Plug 'gre/play2vim'
+Plug 'hashivim/vim-hashicorp-tools'
 
 " Languages - Ruby
 Plug 'vim-ruby/vim-ruby'
