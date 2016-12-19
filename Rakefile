@@ -3,11 +3,6 @@ require 'erb'
 
 desc "Install the dot files into user's home directory"
 task :install do
-  unless File.directory?("vim/bundle/Vundle.vim")
-    puts "installing vundle"
-    `git clone https://github.com/gmarik/Vundle.vim.git vim/bundle/Vundle.vim`
-  end
-
   replace_all = false
 
   Dir['*'].each do |file|
