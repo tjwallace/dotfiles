@@ -298,3 +298,7 @@ let g:used_javascript_libs = 'jquery,underscore,angularjs,angularui,jasmine'
 
 " editorconfig
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+
+" project specific .vimrc
+set exrc
+set secure
