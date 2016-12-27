@@ -28,7 +28,7 @@ ZSH_THEME="bira"
 DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(autojump brew gem git vagrant knife)
+plugins=(autojump gem git vagrant knife aws)
 
 source $ZSH/oh-my-zsh.sh
 
