@@ -1,7 +1,6 @@
 # osx only
 if [[ `uname` == "Darwin" ]]; then
-  export PATH=/usr/local/bin:$PATH
-
+  export PATH=/usr/local/sbin:/usr/local/bin:$PATH
   fpath=(/usr/local/share/zsh-completions $fpath)
 
   export CHROME_BIN="/opt/homebrew-cask/Caskroom/google-chrome/latest/Google Chrome.app/Contents/MacOS/Google Chrome"
