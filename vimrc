@@ -12,10 +12,8 @@ Plug 'altercation/vim-colors-solarized'
 
 " Tools
 Plug 'bling/vim-airline'
-Plug 'skammer/vim-css-color'
 Plug 'tpope/vim-dispatch'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'tpope/vim-rbenv'
 Plug 'vim-scripts/Rename2'
 Plug 'scrooloose/syntastic'
 Plug 'majutsushi/tagbar'
@@ -56,6 +54,7 @@ Plug 'gre/play2vim'
 Plug 'hashivim/vim-hashicorp-tools'
 
 " Languages - Ruby
+Plug 'tpope/vim-rbenv'
 Plug 'vim-ruby/vim-ruby'
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-bundler'
@@ -72,6 +71,7 @@ Plug 'burnettk/vim-angular'
 Plug 'digitaltoad/vim-jade'
 
 " Languages - Web
+Plug 'ap/vim-css-color'
 Plug 'othree/html5.vim'
 Plug 'cakebaker/scss-syntax.vim'
 
