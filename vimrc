@@ -37,7 +37,6 @@ Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 
 " Tools - Formatting
-Plug 'editorconfig/editorconfig-vim'
 Plug 'Raimondi/delimitMate'
 Plug 'sickill/vim-pasta'
 Plug 'tpope/vim-commentary'
