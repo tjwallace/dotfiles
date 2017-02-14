@@ -12,7 +12,7 @@ eval "$(direnv hook zsh)"
 
 # go
 export GOPATH=$HOME/code/go
-export PATH=$PATH:$GOPATH/bin
+export PATH=$GOPATH/bin:$PATH
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
