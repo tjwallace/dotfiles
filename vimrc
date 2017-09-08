@@ -103,11 +103,18 @@ set backupdir=~/.vim/tmp/backup//
 set directory=~/.vim/tmp/swap//
 set backup
 
-" files to ignore
+" wildmenu
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,*.rbc,*.class,vendor/gems/*
 set wildignore+=*.jpg,*.jpeg,*.gif,*.png
 set wildignore+=*.zip,*.apk
+set wildignore+=*.swp,*.bak
+set wildignore+=*.pyc,*.class,*.sln,*.Master,*.csproj,*.csproj.user,*.cache,*.dll,*.pdb,*.min.*
+set wildignore+=*/.git/**/*,*/.hg/**/*,*/.svn/**/*
+set wildignore+=tags
+set wildignore+=*.tar.*
+
+set wildignorecase
 
 " allow mouse clicks
 set mouse=a
