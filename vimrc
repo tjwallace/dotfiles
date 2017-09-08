@@ -69,6 +69,10 @@ Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'burnettk/vim-angular'
 Plug 'digitaltoad/vim-jade'
 
+" Languages - Yavascript - Typescript
+Plug 'leafgarland/typescript-vim'
+Plug 'Quramy/tsuquyomi'
+
 " Languages - Web
 Plug 'ap/vim-css-color'
 Plug 'othree/html5.vim'
@@ -217,6 +221,10 @@ let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=2
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_ruby_mri_exec = '/Users/jeff/.rbenv/shims/ruby'
+
+" typescript
+let g:tsuquyomi_disable_quickfix = 1
+let g:syntastic_typescript_checkers = ['tsuquyomi']
 
 " tagbar
 map <leader>rt :TagbarToggle<cr>
