@@ -68,6 +68,7 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'burnettk/vim-angular'
 Plug 'digitaltoad/vim-jade'
+Plug 'mtscout6/syntastic-local-eslint.vim'
 
 " Languages - Yavascript - Typescript
 Plug 'leafgarland/typescript-vim'
