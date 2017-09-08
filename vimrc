@@ -49,6 +49,7 @@ Plug 'tpope/vim-git'
 Plug 'tpope/vim-markdown'
 Plug 'derekwyatt/vim-scala'
 Plug 'hashivim/vim-hashicorp-tools'
+Plug 'jparise/vim-graphql'
 
 " Languages - Ruby
 Plug 'tpope/vim-rbenv'
