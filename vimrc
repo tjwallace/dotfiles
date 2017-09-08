@@ -31,10 +31,8 @@ Plug 'tpope/vim-rhubarb'
 Plug 'mhinz/vim-signify'
 
 " Tools - Tab Completion
-Plug 'ervandew/supertab'
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
+Plug 'valloric/youcompleteme', { 'do': './install.py --tern-completer --gocode-completer' }
+Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 " Tools - Formatting
@@ -205,6 +203,13 @@ set cursorline
 
 " enabled spell checking in git commit
 autocmd FileType gitcommit setlocal spell
+
+" generic completion
+set omnifunc=syntaxcomplete#Complete
+set completeopt-=preview
+
+" snippets
+let g:UltiSnipsExpandTrigger="<c-k>"
 
 " syntastic
 let g:syntastic_enable_signs=1
