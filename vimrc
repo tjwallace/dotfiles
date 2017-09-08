@@ -27,6 +27,7 @@ Plug 'corntrace/bufexplorer'
 
 " Tools - Git
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 Plug 'mhinz/vim-signify'
 
 " Tools - Tab Completion
