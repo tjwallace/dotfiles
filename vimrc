@@ -63,6 +63,7 @@ Plug 'tpope/vim-cucumber'
 
 " Languages - Yavascript
 Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 Plug 'kchmck/vim-coffee-script'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'burnettk/vim-angular'
@@ -300,6 +301,9 @@ endfunction
 
 " javascript-libraries-syntax
 let g:used_javascript_libs = 'jquery,underscore,angularjs,angularui,jasmine'
+
+" JSX
+let g:jsx_ext_required = 0
 
 " editorconfig
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
