@@ -31,9 +31,26 @@ Plug 'tpope/vim-rhubarb'
 Plug 'mhinz/vim-signify'
 
 " Tools - Tab Completion
-Plug 'valloric/youcompleteme', { 'do': './install.py --tern-completer --gocode-completer' }
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/async.vim'
+
+" Plug 'prabirshrestha/vim-lsp'
+" Plug 'prabirshrestha/asyncomplete-lsp.vim'
+
+" Tools - Tab Completion - Libraries
+Plug 'yami-beta/asyncomplete-omni.vim'
+Plug 'prabirshrestha/asyncomplete-buffer.vim'
+
+" Tools - Tab Completion - Typescript
+Plug 'runoshun/tscompletejob'
+Plug 'prabirshrestha/asyncomplete-tscompletejob.vim'
+
+" Tools - Tab Completion - Snippets
+if has('python3')
+  Plug 'SirVer/ultisnips'
+  Plug 'honza/vim-snippets'
+  Plug 'prabirshrestha/asyncomplete-ultisnips.vim'
+endif
 
 " Tools - Formatting
 Plug 'Raimondi/delimitMate'
@@ -72,7 +89,6 @@ Plug 'mtscout6/syntastic-local-eslint.vim'
 
 " Languages - Yavascript - Typescript
 Plug 'leafgarland/typescript-vim'
-Plug 'Quramy/tsuquyomi'
 
 " Languages - Web
 Plug 'ap/vim-css-color'
@@ -167,7 +183,7 @@ map L $
 
 " shorcuts
 nnoremap ; :
-inoremap jj <ESC>
+" inoremap jj <ESC>
 
 " save when focus lost
 au FocusLost * :wa
@@ -221,18 +237,49 @@ autocmd FileType gitcommit setlocal spell
 set omnifunc=syntaxcomplete#Complete
 set completeopt-=preview
 
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
+inoremap <silent> <CR> <C-r>=<SID>endwise_compatible_enter()<CR>
+function! s:endwise_compatible_enter()
+  return pumvisible() ? "\<C-y>" : "\<CR>"
+endfunction
+imap <c-space> <Plug>(asyncomplete_force_refresh)
+
+call asyncomplete#register_source(asyncomplete#sources#omni#get_source_options({
+      \ 'name': 'omni',
+      \ 'whitelist': ['*'],
+      \ 'completor': function('asyncomplete#sources#omni#completor')
+      \  }))
+
+call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
+      \ 'name': 'buffer',
+      \ 'whitelist': ['*'],
+      \ 'blacklist': ['go'],
+      \ 'completor': function('asyncomplete#sources#buffer#completor'),
+      \ }))
+
+call asyncomplete#register_source(asyncomplete#sources#tscompletejob#get_source_options({
+      \ 'name': 'tscompletejob',
+      \ 'whitelist': ['typescript'],
+      \ 'completor': function('asyncomplete#sources#tscompletejob#completor'),
+      \ }))
+
 " snippets
-let g:UltiSnipsExpandTrigger="<c-k>"
+if has('python3')
+  let g:UltiSnipsExpandTrigger="<c-k>"
+  call asyncomplete#register_source(asyncomplete#sources#ultisnips#get_source_options({
+        \ 'name': 'ultisnips',
+        \ 'whitelist': ['*'],
+        \ 'completor': function('asyncomplete#sources#ultisnips#completor'),
+        \ }))
+endif
 
 " syntastic
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=2
 let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_ruby_mri_exec = '/Users/jeff/.rbenv/shims/ruby'
-
-" typescript
-let g:tsuquyomi_disable_quickfix = 1
-let g:syntastic_typescript_checkers = ['tsuquyomi']
+let g:syntastic_ruby_mri_exec = '~/.rbenv/shims/ruby'
 
 " tagbar
 map <leader>rt :TagbarToggle<cr>
