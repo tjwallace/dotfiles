@@ -15,7 +15,7 @@ Plug 'bling/vim-airline'
 Plug 'tpope/vim-dispatch'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'vim-scripts/Rename2'
-Plug 'scrooloose/syntastic'
+Plug 'w0rp/ale'
 Plug 'majutsushi/tagbar'
 Plug 'vim-scripts/YankRing.vim'
 
@@ -31,26 +31,9 @@ Plug 'tpope/vim-rhubarb'
 Plug 'mhinz/vim-signify'
 
 " Tools - Tab Completion
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/async.vim'
-
-" Plug 'prabirshrestha/vim-lsp'
-" Plug 'prabirshrestha/asyncomplete-lsp.vim'
-
-" Tools - Tab Completion - Libraries
-Plug 'yami-beta/asyncomplete-omni.vim'
-Plug 'prabirshrestha/asyncomplete-buffer.vim'
-
-" Tools - Tab Completion - Typescript
-Plug 'runoshun/tscompletejob'
-Plug 'prabirshrestha/asyncomplete-tscompletejob.vim'
-
-" Tools - Tab Completion - Snippets
-if has('python3')
-  Plug 'SirVer/ultisnips'
-  Plug 'honza/vim-snippets'
-  Plug 'prabirshrestha/asyncomplete-ultisnips.vim'
-endif
+" macvim must be compiled with python3 support
+" brew reinstall macvim --with-python3
+Plug 'maralla/completor.vim', { 'do': 'make js' }
 
 " Tools - Formatting
 Plug 'Raimondi/delimitMate'
@@ -85,7 +68,6 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'burnettk/vim-angular'
 Plug 'digitaltoad/vim-jade'
-Plug 'mtscout6/syntastic-local-eslint.vim'
 
 " Languages - Yavascript - Typescript
 Plug 'leafgarland/typescript-vim'
@@ -244,42 +226,30 @@ inoremap <silent> <CR> <C-r>=<SID>endwise_compatible_enter()<CR>
 function! s:endwise_compatible_enter()
   return pumvisible() ? "\<C-y>" : "\<CR>"
 endfunction
-imap <c-space> <Plug>(asyncomplete_force_refresh)
 
-call asyncomplete#register_source(asyncomplete#sources#omni#get_source_options({
-      \ 'name': 'omni',
-      \ 'whitelist': ['*'],
-      \ 'completor': function('asyncomplete#sources#omni#completor')
-      \  }))
+" ALE
+let g:ale_sign_warning = '▲'
+let g:ale_sign_error = '✗'
+highlight link ALEWarningSign String
+highlight link ALEErrorSign Title
 
-call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
-      \ 'name': 'buffer',
-      \ 'whitelist': ['*'],
-      \ 'blacklist': ['go'],
-      \ 'completor': function('asyncomplete#sources#buffer#completor'),
-      \ }))
+let g:ale_linters = {
+\  'javascript': ['eslint'],
+\}
 
-call asyncomplete#register_source(asyncomplete#sources#tscompletejob#get_source_options({
-      \ 'name': 'tscompletejob',
-      \ 'whitelist': ['typescript'],
-      \ 'completor': function('asyncomplete#sources#tscompletejob#completor'),
-      \ }))
+let g:ale_fixers = {
+\  'javascript': [
+\    'eslint',
+\  ],
+\  'ruby': [
+\    'rubocop',
+\  ],
+\}
 
-" snippets
-if has('python3')
-  let g:UltiSnipsExpandTrigger="<c-k>"
-  call asyncomplete#register_source(asyncomplete#sources#ultisnips#get_source_options({
-        \ 'name': 'ultisnips',
-        \ 'whitelist': ['*'],
-        \ 'completor': function('asyncomplete#sources#ultisnips#completor'),
-        \ }))
-endif
+let g:ale_ruby_rubocop_executable = 'bundle'
 
-" syntastic
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=2
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_ruby_mri_exec = '~/.rbenv/shims/ruby'
+" show errors/warnings in airline
+let g:airline#extensions#ale#enabled = 1
 
 " tagbar
 map <leader>rt :TagbarToggle<cr>
