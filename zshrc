@@ -7,6 +7,10 @@ fi
 # rbenv
 eval "$(rbenv init -)"
 
+# nvm
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
+
 # direnv
 eval "$(direnv hook zsh)"
 
