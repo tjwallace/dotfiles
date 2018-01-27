@@ -34,6 +34,7 @@ Plug 'mhinz/vim-signify'
 " macvim must be compiled with python3 support
 " brew reinstall macvim --with-python3
 Plug 'maralla/completor.vim', { 'do': 'make js' }
+Plug 'maralla/completor-typescript'
 
 " Tools - Formatting
 Plug 'Raimondi/delimitMate'
@@ -70,7 +71,7 @@ Plug 'burnettk/vim-angular'
 Plug 'digitaltoad/vim-jade'
 
 " Languages - Yavascript - Typescript
-Plug 'leafgarland/typescript-vim'
+Plug 'HerringtonDarkholme/yats.vim'
 
 " Languages - Web
 Plug 'ap/vim-css-color'
@@ -235,6 +236,7 @@ highlight link ALEErrorSign Title
 
 let g:ale_linters = {
 \  'javascript': ['eslint'],
+\  'typescript': ['tslint', 'tsserver', 'typecheck'],
 \}
 
 let g:ale_fixers = {
