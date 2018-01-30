@@ -18,9 +18,10 @@ Plug 'vim-scripts/Rename2'
 Plug 'w0rp/ale'
 Plug 'majutsushi/tagbar'
 Plug 'vim-scripts/YankRing.vim'
+Plug 'justinmk/vim-dirvish'
+Plug 'tpope/vim-eunuch'
 
 " Tools - Search
-Plug 'tpope/vim-vinegar'
 Plug 'mileszs/ack.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'corntrace/bufexplorer'
@@ -196,9 +197,10 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 " sudo write
 cmap w!! w !sudo tee % >/dev/null
 
-" netrw
-map <leader>n :e.<cr>
-map <leader>N :Explore<cr>
+" vim-dirvish
+let g:dirvish_relative_paths = 1
+" folders at the top
+let g:dirvish_mode = ':sort ,^.*[\/],'
 
 " copy to clipboard
 vmap <leader>y "+y
