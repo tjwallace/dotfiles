@@ -20,6 +20,7 @@ Plug 'majutsushi/tagbar'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'justinmk/vim-dirvish'
 Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-abolish'
 
 " Tools - Search
 Plug 'mileszs/ack.vim'
