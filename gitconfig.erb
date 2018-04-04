@@ -1,3 +1,4 @@
+# vim: noexpandtab:ts=4:sw=4
 [user]
 	name = Jeff Wallace
 	email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
@@ -6,43 +7,44 @@
 	user = tjwallace
 
 [alias]
-	ci = commit -a
+	ci = commit --verbose
+	amend = commit --amend
 	co = checkout
 	st = status -sb
 	hist = log --pretty=format:\"%h | %ad | %s %Cgreen[%an]%Creset%Cred%d%Creset\" --graph --date=short
-	wd = diff --word-diff
 	d = diff
 	dc = diff --cached
 	yolo = push --force-with-lease origin HEAD
-
-[color]
-	branch = auto
-	diff = auto
-	status = auto
-	ui = auto
-	grep = auto
-	interactive = auto
-	pager = true
+	noff = merge --no-ff
+	ff = merge --ff-only
+	rbm = rebase origin/master
+	rbmi = rebase -i origin/master
 
 [core]
 	editor = vim
 	pager = most
 	excludesfile = ~/.gitignore
 
+[color]
+	ui = auto
+
 [push]
 	default = current
+[pull]
+	rebase = true
 
-[branch]
-	autosetuprebase = always
+[commit]
+	gpgsign = true
+
+[merge]
+	tool = opendiff
+[mergetool]
+	keepBackup = false
 
 [rebase]
 	autoSquash = true
 	autoStash = true
 
-[mergetool]
-	keepBackup = false
-
-[mergetool "p4merge"]
-	cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
-	trustExitCode = false
-	keepTemporaries = false
+[rerere]
+	enabled = true
+	autoupdate = true
