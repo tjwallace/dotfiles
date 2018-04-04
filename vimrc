@@ -300,6 +300,8 @@ nnoremap K :Ack "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " highlight cap files
 au BufRead,BufNewFile *.cap set filetype=ruby
+" highlight jbuilder files
+au BufNewFile,BufRead *.json.jbuilder set ft=ruby
 
 " close hidden buffers
 " http://stackoverflow.com/a/1536094
