@@ -339,7 +339,7 @@ function! Wipeout()
 endfunction
 
 " javascript-libraries-syntax
-let g:used_javascript_libs = 'jquery,underscore,angularjs,angularui,jasmine'
+let g:used_javascript_libs = 'jquery,underscore,ramda,jasmine,chai,react'
 
 " JSX
 let g:jsx_ext_required = 0
