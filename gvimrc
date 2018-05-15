@@ -4,7 +4,8 @@ if has('gui_gtk2')
 
   let g:gist_clip_command = 'xclip -selection clipboard'
 elseif has('gui_macvim')
-  set guifont=Monaco:h13
+  set guifont=Menlo:h13
+  set linespace=1
   set guioptions=aAce
 
   let g:gist_clip_command = 'pbcopy'
