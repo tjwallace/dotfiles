@@ -216,6 +216,7 @@ set cursorline
 autocmd FileType gitcommit setlocal spell
 
 " generic completion
+let g:completor_node_binary = '~/.nvm/versions/node/v8.11.1/bin/node'
 set omnifunc=syntaxcomplete#Complete
 set completeopt-=preview
 
@@ -248,6 +249,8 @@ let g:ale_fixers = {
 \}
 
 let g:ale_ruby_rubocop_executable = 'bundle'
+let g:ale_javascript_eslint_use_global = 1
+let g:ale_javascript_eslint_executable = 'eslint_d'
 
 " show errors/warnings in airline
 let g:airline#extensions#ale#enabled = 1
