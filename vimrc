@@ -228,6 +228,13 @@ function! s:endwise_compatible_enter()
   return pumvisible() ? "\<C-y>" : "\<CR>"
 endfunction
 
+" Ruby files
+let g:ruby_indent_block_style = 'do'
+" highlight cap files
+au BufRead,BufNewFile *.cap set filetype=ruby
+" highlight jbuilder files
+au BufNewFile,BufRead *.json.jbuilder set ft=ruby
+
 " ALE
 let g:ale_sign_warning = '▲'
 let g:ale_sign_error = '✗'
@@ -235,6 +242,7 @@ highlight link ALEWarningSign String
 highlight link ALEErrorSign Title
 
 let g:ale_linters = {
+\  'ruby': ['rubocop', 'reek', 'ruby'],
 \  'javascript': ['eslint'],
 \  'typescript': ['tslint', 'tsserver', 'typecheck'],
 \}
@@ -248,7 +256,7 @@ let g:ale_fixers = {
 \  ],
 \}
 
-let g:ale_ruby_rubocop_executable = 'bundle'
+" let g:ale_ruby_rubocop_executable = '.bundle/bin/rubocop'
 let g:ale_javascript_eslint_use_global = 1
 let g:ale_javascript_eslint_executable = 'eslint_d'
 
@@ -297,11 +305,6 @@ map <Leader>a :call RunAllSpecs()<CR>
 
 " global search for word under cursor
 nnoremap K :Ack "\b<C-R><C-W>\b"<CR>:cw<CR>
-
-" highlight cap files
-au BufRead,BufNewFile *.cap set filetype=ruby
-" highlight jbuilder files
-au BufNewFile,BufRead *.json.jbuilder set ft=ruby
 
 " close hidden buffers
 " http://stackoverflow.com/a/1536094
