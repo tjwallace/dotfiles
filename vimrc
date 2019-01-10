@@ -285,6 +285,10 @@ if executable('ag')
   " https://github.com/ggreer/the_silver_searcher
   let g:ackprg = 'ag --vimgrep'
 endif
+if executable('rg')
+  " https://github.com/BurntSushi/ripgrep
+  let g:ackprg = 'rg --vimgrep'
+endif
 
 " yankring
 let g:yankring_history_dir = '~/.vim/tmp'
