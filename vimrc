@@ -203,12 +203,8 @@ let g:dirvish_relative_paths = 1
 " folders at the top
 let g:dirvish_mode = ':sort ,^.*[\/],'
 
-" copy to clipboard
-vmap <leader>y "+y
-" copy current line to clipboard
-nmap <leader>Y "+yy
-" paste from clipboard
-nmap <leader>p "+gP
+" replace without clearing buffer
+vnoremap <leader>p "_dP
 
 " show the registers from things cut/yanked
 nmap <leader>r :registers<CR>
