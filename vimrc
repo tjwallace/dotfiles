@@ -349,6 +349,9 @@ let g:jsx_ext_required = 0
 " editorconfig
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
-" project specific .vimrc
-set exrc
-set secure
+" Autoload vimrc changes
+" From https://superuser.com/a/417997
+augroup myvimrc
+  au!
+  au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+augroup END
