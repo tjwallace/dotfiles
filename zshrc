@@ -58,3 +58,6 @@ bindkey '^[[B' history-beginning-search-forward
 if which hub > /dev/null; then
   eval "$(hub alias -s)"
 fi
+
+# fzf options
+export FZF_DEFAULT_OPTS="--history=$HOME/.fzf_history"

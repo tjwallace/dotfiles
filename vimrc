@@ -24,7 +24,8 @@ Plug 'tpope/vim-abolish'
 
 " Tools - Search
 Plug 'mileszs/ack.vim'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf', { 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
 Plug 'corntrace/bufexplorer'
 
 " Tools - Git
@@ -266,16 +267,10 @@ let g:airline#extensions#ale#enabled = 1
 " tagbar
 map <leader>rt :TagbarToggle<cr>
 
-" ctrlp
-let g:ctrlp_user_command = {
-  \ 'types': {
-    \ 1: ['.git', 'cd %s && git ls-files -co --exclude-standard'],
-    \ 2: ['.hg', 'hg --cwd %s locate -I .'],
-    \ },
-  \ 'fallback': 'find %s -type f'
-\ }
-let g:ctrlp_clear_cache_on_exit = 1
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
+" fzf
+nnoremap <silent> <Leader>ag  :Rg <C-R><C-W><CR>
+nnoremap <silent> <Leader>AG  :Rg <C-R><C-A><CR>
+xnoremap <silent> <Leader>ag  y:Rg <C-R>"<CR>
 
 " ack
 if executable('ack-grep')

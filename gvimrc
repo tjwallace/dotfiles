@@ -10,18 +10,20 @@ elseif has('gui_macvim')
 
   let g:gist_clip_command = 'pbcopy'
 
-  " ctrlp
+  " New tab
   macmenu &File.New\ Tab key=<D-S-t>
-  map <D-t> :CtrlP<CR>
-  imap <D-t> <ESC>:CtrlP<CR>
-  map <D-r> :CtrlPTag<CR>
 
-  " Ack
-  macmenu Edit.Find.Find\.\.\. key=<nop>
-  map <D-f> :Ack<space>
+  " fzf
+  map <D-t> :GFiles<CR>
+  map <D-r> :Files<CR>
 
+  " quick fix list navigation
   map <D-j> :cn<CR>
   imap <D-j> <ESC>:cn<CR>
   map <D-k> :cp<CR>
   imap <D-k> <ESC>:cp<CR>
+
+  " Ack
+  macmenu Edit.Find.Find\.\.\. key=<nop>
+  map <D-f> :Ack<space>
 endif
