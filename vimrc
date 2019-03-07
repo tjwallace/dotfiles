@@ -21,6 +21,7 @@ Plug 'vim-scripts/YankRing.vim'
 Plug 'justinmk/vim-dirvish'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-abolish'
+Plug 'janko-m/vim-test'
 
 " Tools - Search
 Plug 'mileszs/ack.vim'
@@ -58,7 +59,7 @@ Plug 'jparise/vim-graphql'
 " Languages - Ruby
 Plug 'tpope/vim-rbenv'
 Plug 'vim-ruby/vim-ruby'
-Plug 'thoughtbot/vim-rspec'
+Plug 'keith/rspec.vim'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-rails'
 Plug 'slim-template/vim-slim'
@@ -293,14 +294,13 @@ let g:yankring_history_file = 'yankring_history'
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 
-" dispatch
-let g:rspec_command = "Dispatch rspec {spec}"
-
-" rspec
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
+" vim-test mappings
+nnoremap <silent> <Leader>t :TestFile<CR>
+nnoremap <silent> <Leader>s :TestNearest<CR>
+nnoremap <silent> <Leader>l :TestLast<CR>
+nnoremap <silent> <Leader>a :TestSuite<CR>
+nnoremap <silent> <leader>gt :TestVisit<CR>
+let test#strategy = "dispatch"
 
 " global search for word under cursor
 nnoremap K :Ack "\b<C-R><C-W>\b"<CR>:cw<CR>
