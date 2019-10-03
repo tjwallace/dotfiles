@@ -22,6 +22,9 @@ Plug 'justinmk/vim-dirvish'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-abolish'
 Plug 'janko-m/vim-test'
+Plug 'tpope/vim-projectionist'
+Plug 'pbrisbin/vim-mkdir'
+Plug 'kkoomen/vim-doge'
 
 " Tools - Search
 Plug 'mileszs/ack.vim'
@@ -35,10 +38,7 @@ Plug 'tpope/vim-rhubarb'
 Plug 'mhinz/vim-signify'
 
 " Tools - Tab Completion
-" macvim must be compiled with python3 support
-" brew reinstall macvim --with-python3
-Plug 'maralla/completor.vim', { 'do': 'make js' }
-Plug 'maralla/completor-typescript'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 
 " Tools - Formatting
 Plug 'Raimondi/delimitMate'
@@ -73,6 +73,10 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'burnettk/vim-angular'
 Plug 'digitaltoad/vim-jade'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'branch': 'release/1.x',
+  \ 'for': ['javascript', 'typescript'] }
 
 " Languages - Yavascript - Typescript
 Plug 'HerringtonDarkholme/yats.vim'
@@ -81,6 +85,10 @@ Plug 'HerringtonDarkholme/yats.vim'
 Plug 'ap/vim-css-color'
 Plug 'othree/html5.vim'
 Plug 'cakebaker/scss-syntax.vim'
+Plug 'iloginow/vim-stylus'
+
+" Languages - Docker
+Plug 'moby/moby' , {'rtp': '/contrib/syntax/vim/'}
 
 call plug#end()
 
@@ -217,21 +225,35 @@ set cursorline
 " enabled spell checking in git commit
 autocmd FileType gitcommit setlocal spell
 
-" generic completion
-let g:completor_node_binary = '~/.nvm/versions/node/v8.11.1/bin/node'
-set omnifunc=syntaxcomplete#Complete
-set completeopt-=preview
+" coc (completion) config
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-" inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
 inoremap <silent> <CR> <C-r>=<SID>endwise_compatible_enter()<CR>
 function! s:endwise_compatible_enter()
   return pumvisible() ? "\<C-y>" : "\<CR>"
 endfunction
 
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Remap for rename current word
+nmap <leader>rn <Plug>(coc-rename)
+
 " Ruby files
 let g:ruby_indent_block_style = 'do'
+let g:rubycomplete_rails = 1
+let g:rubycomplete_load_gemfile = 1
+let g:ruby_spellcheck_strings = 1
+
 " highlight cap files
 au BufRead,BufNewFile *.cap set filetype=ruby
 " highlight jbuilder files
@@ -250,17 +272,18 @@ let g:ale_linters = {
 \}
 
 let g:ale_fixers = {
-\  'javascript': [
-\    'eslint',
-\  ],
-\  'ruby': [
-\    'rubocop',
-\  ],
+\  'ruby': ['rubocop'],
+\  'javascript': ['eslint'],
 \}
 
 " let g:ale_ruby_rubocop_executable = '.bundle/bin/rubocop'
 let g:ale_javascript_eslint_use_global = 1
 let g:ale_javascript_eslint_executable = 'eslint_d'
+
+" prettier
+let g:prettier#exec_cmd_async = 1
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx Prettier
 
 " show errors/warnings in airline
 let g:airline#extensions#ale#enabled = 1
