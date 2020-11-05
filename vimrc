@@ -277,6 +277,8 @@ let g:ale_fixers = {
 \}
 
 " let g:ale_ruby_rubocop_executable = '.bundle/bin/rubocop'
+let g:ale_ruby_rubocop_auto_correct_all = 1
+
 let g:ale_javascript_eslint_use_global = 1
 let g:ale_javascript_eslint_executable = 'eslint_d'
 
