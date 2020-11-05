@@ -31,6 +31,7 @@ Plug 'mileszs/ack.vim'
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'corntrace/bufexplorer'
+Plug 'pechorin/any-jump.vim'
 
 " Tools - Git
 Plug 'tpope/vim-fugitive'
@@ -295,6 +296,10 @@ map <leader>rt :TagbarToggle<cr>
 nnoremap <silent> <Leader>ag  :Rg <C-R><C-W><CR>
 nnoremap <silent> <Leader>AG  :Rg <C-R><C-A><CR>
 xnoremap <silent> <Leader>ag  y:Rg <C-R>"<CR>
+
+" any-jump
+let g:any_jump_grouping_enabled = 1
+let g:any_jump_search_prefered_engine = 'rg'
 
 " ack
 if executable('ack-grep')
