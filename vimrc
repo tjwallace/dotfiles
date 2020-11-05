@@ -76,7 +76,6 @@ Plug 'burnettk/vim-angular'
 Plug 'digitaltoad/vim-jade'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
-  \ 'branch': 'release/1.x',
   \ 'for': ['javascript', 'typescript'] }
 
 " Languages - Yavascript - Typescript
