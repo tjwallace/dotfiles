@@ -2,10 +2,9 @@
 [user]
 	name = Jeff Wallace
 	email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
-
+	signingkey = <%= print("Your GPG signing key: "); STDOUT.flush; STDIN.gets.chomp %>
 [github]
 	user = tjwallace
-
 [alias]
 	ci = commit --verbose
 	amend = commit --amend
@@ -19,32 +18,25 @@
 	ff = merge --ff-only
 	rbm = rebase origin/master
 	rbmi = rebase -i origin/master
-
 [core]
 	editor = vim
 	pager = most
 	excludesfile = ~/.gitignore
-
 [color]
 	ui = auto
-
 [push]
 	default = current
 [pull]
 	rebase = true
-
 [commit]
 	gpgsign = true
-
 [merge]
 	tool = opendiff
 [mergetool]
 	keepBackup = false
-
 [rebase]
 	autoSquash = true
 	autoStash = true
-
 [rerere]
 	enabled = true
 	autoupdate = true
