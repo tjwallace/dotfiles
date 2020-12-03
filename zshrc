@@ -5,7 +5,9 @@ if [[ `uname` == "Darwin" ]]; then
 fi
 
 # rbenv
-eval "$(rbenv init -)"
+if which rbenv > /dev/null; then
+  eval "$(rbenv init -)"
+fi
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
@@ -13,7 +15,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
 
 # direnv
-eval "$(direnv hook zsh)"
+if which direnv > /dev/null; then
+  eval "$(direnv hook zsh)"
+fi
 
 # go
 export GOPATH=$HOME/code/go
