@@ -1,7 +1,14 @@
-# osx only
-if [[ `uname` == "Darwin" ]]; then
+# Include local config first
+[ -s ~/.zshrc.local ] && source ~/.zshrc.local
+
+# homebrew
+if type brew &>/dev/null; then
   export PATH=/usr/local/sbin:/usr/local/bin:$PATH
-  fpath=(/usr/local/share/zsh-completions $fpath)
+
+  # completions
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+  autoload -Uz compinit
+  compinit
 fi
 
 # rbenv
@@ -24,16 +31,16 @@ export GOPATH=$HOME/code/go
 export PATH=$GOPATH/bin:$PATH
 
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set to the name theme to load.
 # Look in ~/.oh-my-zsh/themes/
-ZSH_THEME="bira"
+ZSH_THEME="dstufft"
 
 DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(autojump gem git vagrant knife aws)
+plugins=()
 
 source $ZSH/oh-my-zsh.sh
 
