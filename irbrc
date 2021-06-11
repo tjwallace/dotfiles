@@ -8,11 +8,15 @@ require 'irb/ext/save-history'
 IRB.conf[:SAVE_HISTORY] = 10_000
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb-history"
 
-begin
-  # gem install irbtools
-  require 'irbtools'
-rescue LoadError
-  puts "* Unable to require 'irbtools'"
+[
+  'irbtools',
+  'active_support/all'
+].each do |library|
+  begin
+    require library
+  rescue LoadError
+    puts "* Unable to load #{library}"
+  end
 end
 
 # Enable lambda prompts. http://twitter.com/acetoxy/status/26734736005
