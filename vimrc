@@ -39,7 +39,7 @@ Plug 'tpope/vim-rhubarb'
 Plug 'mhinz/vim-signify'
 
 " Tools - Tab Completion
-Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Tools - Formatting
 Plug 'Raimondi/delimitMate'
@@ -247,6 +247,9 @@ nmap <silent> gr <Plug>(coc-references)
 
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
+
+" Global coc extensions
+let g:coc_global_extensions = ['coc-solargraph', 'coc-json', 'coc-tsserver', 'coc-git', 'coc-syntax']
 
 " Ruby files
 let g:ruby_indent_block_style = 'do'
