@@ -5,7 +5,6 @@ Clone the repository to a location of your choosing and run `rake install`.
 # Features
 
 * [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-* [slate](https://github.com/jigish/slate)
 
 ## Vim
 
