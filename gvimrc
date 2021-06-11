@@ -24,6 +24,6 @@ elseif has('gui_macvim')
   imap <D-k> <ESC>:cp<CR>
 
   " Ack
-  macmenu Edit.Find.Find\.\.\. key=<nop>
+  macmenu Edit.Find.Find… key=<nop>
   map <D-f> :Ack<space>
 endif
