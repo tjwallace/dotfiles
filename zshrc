@@ -49,7 +49,7 @@ unsetopt correct_all
 
 alias ll='ls -lh'
 alias l='ls -lah'
-alias bi='bundle install --binstubs .bundle/bin'
+alias bi='bundle install && bundle binstubs --all --path .bundle/bin'
 
 # use most as pager if available
 if which most > /dev/null; then
