@@ -88,7 +88,7 @@ Plug 'cakebaker/scss-syntax.vim'
 Plug 'iloginow/vim-stylus'
 
 " Languages - Docker
-Plug 'moby/moby' , {'rtp': '/contrib/syntax/vim/'}
+Plug 'ekalinin/Dockerfile.vim'
 
 call plug#end()
 
