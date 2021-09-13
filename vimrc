@@ -24,7 +24,7 @@ Plug 'tpope/vim-abolish'
 Plug 'janko-m/vim-test'
 Plug 'tpope/vim-projectionist'
 Plug 'pbrisbin/vim-mkdir'
-Plug 'kkoomen/vim-doge'
+Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 
 " Tools - Search
 Plug 'mileszs/ack.vim'
