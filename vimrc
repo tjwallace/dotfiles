@@ -234,10 +234,14 @@ inoremap <silent><expr> <TAB>
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-inoremap <silent> <CR> <C-r>=<SID>endwise_compatible_enter()<CR>
-function! s:endwise_compatible_enter()
-  return pumvisible() ? "\<C-y>" : "\<CR>"
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+" coc and endwise compatibility
+" https://github.com/tpope/vim-endwise/issues/125#issuecomment-1076678001
+inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm() :"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>\<c-r>=EndwiseDiscretionary()\<CR>"
 
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
