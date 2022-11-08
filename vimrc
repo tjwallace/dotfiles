@@ -55,6 +55,7 @@ Plug 'tpope/vim-markdown'
 Plug 'derekwyatt/vim-scala'
 Plug 'hashivim/vim-hashicorp-tools'
 Plug 'jparise/vim-graphql'
+Plug 'wfxr/protobuf.vim'
 
 " Languages - Ruby
 Plug 'tpope/vim-rbenv'
