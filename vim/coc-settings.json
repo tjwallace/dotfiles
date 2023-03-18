@@ -1,3 +1,13 @@
 {
-  "suggest.noselect": true
+  "suggest.noselect": true,
+
+  "languageserver": {
+    "terraform": {
+      "command": "terraform-ls",
+      "args": ["serve"],
+      "filetypes": ["terraform", "tf"],
+      "initializationOptions": {},
+      "settings": {}
+    }
+  }
 }
