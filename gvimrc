@@ -1,8 +1,15 @@
-if has('gui_gtk2')
+if has('gui_gtk3')
   set gfn=DejaVu\ Sans\ Mono\ 9
   set guioptions=m
 
   let g:gist_clip_command = 'xclip -selection clipboard'
+
+  " system copy/paste
+  " https://superuser.com/a/189198
+  vmap <C-c> "+yi
+  vmap <C-x> "+c
+  vmap <C-v> c<ESC>"+p
+  imap <C-v> <C-r><C-o>+
 elseif has('gui_macvim')
   set guifont=Menlo:h13
   set linespace=1
