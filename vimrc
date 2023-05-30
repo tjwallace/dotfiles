@@ -66,46 +66,21 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 
 " Languages
+Plug 'sheerun/vim-polyglot'
 Plug 'vim-scripts/csv.vim'
-Plug 'tpope/vim-git'
-Plug 'tpope/vim-markdown'
-Plug 'derekwyatt/vim-scala'
-Plug 'hashivim/vim-hashicorp-tools'
-Plug 'jparise/vim-graphql'
-Plug 'wfxr/protobuf.vim'
 
 " Languages - Ruby
 Plug 'tpope/vim-rbenv'
-Plug 'vim-ruby/vim-ruby'
-Plug 'keith/rspec.vim'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-rails'
-Plug 'slim-template/vim-slim'
-Plug 'tpope/vim-haml'
-Plug 'tpope/vim-cucumber'
 
 " Languages - Yavascript
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'kchmck/vim-coffee-script'
-Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'burnettk/vim-angular'
-Plug 'digitaltoad/vim-jade'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript'] }
 
-" Languages - Yavascript - Typescript
-Plug 'HerringtonDarkholme/yats.vim'
-
 " Languages - Web
 Plug 'ap/vim-css-color'
-Plug 'othree/html5.vim'
-Plug 'cakebaker/scss-syntax.vim'
-Plug 'iloginow/vim-stylus'
-
-" Languages - Docker
-Plug 'ekalinin/Dockerfile.vim'
 
 " Languages - Ansible
 Plug 'pearofducks/ansible-vim'
