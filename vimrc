@@ -277,7 +277,18 @@ nmap <silent> gr <Plug>(coc-references)
 nmap <leader>rn <Plug>(coc-rename)
 
 " Global coc extensions
-let g:coc_global_extensions = ['coc-solargraph', 'coc-json', 'coc-tsserver', 'coc-git', 'coc-syntax']
+let g:coc_global_extensions = [
+      \ 'coc-solargraph',
+      \ 'coc-json',
+      \ 'coc-tsserver',
+      \ 'coc-git',
+      \ 'coc-syntax',
+      \ '@yaegassy/coc-ansible'
+      \ ]
+
+let g:coc_filetype_map = {
+      \ 'yaml.ansible': 'ansible',
+      \ }
 
 let g:coc_filetype_map = {
   \ 'yaml.ansible': 'ansible',
