@@ -5,6 +5,13 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
+" leader character
+let mapleader = "\\"
+
+" vim-plug config
+" limit concurrency to avoid hammering GitHub
+let g:plug_threads = 2
+
 call plug#begin('~/.vim/plugged')
 
 " Colors
