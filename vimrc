@@ -283,7 +283,8 @@ let g:coc_global_extensions = [
       \ 'coc-tsserver',
       \ 'coc-git',
       \ 'coc-syntax',
-      \ '@yaegassy/coc-ansible'
+      \ '@yaegassy/coc-ansible',
+      \ 'coc-docker',
       \ ]
 
 let g:coc_filetype_map = {
