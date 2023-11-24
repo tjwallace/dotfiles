@@ -90,6 +90,10 @@ Plug 'iloginow/vim-stylus'
 " Languages - Docker
 Plug 'ekalinin/Dockerfile.vim'
 
+" Languages - Ansible
+Plug 'pearofducks/ansible-vim'
+Plug 'yaegassy/coc-ansible', {'do': 'yarn install --frozen-lockfile'}
+
 call plug#end()
 
 set number
@@ -267,6 +271,10 @@ nmap <leader>rn <Plug>(coc-rename)
 
 " Global coc extensions
 let g:coc_global_extensions = ['coc-solargraph', 'coc-json', 'coc-tsserver', 'coc-git', 'coc-syntax']
+
+let g:coc_filetype_map = {
+  \ 'yaml.ansible': 'ansible',
+  \ }
 
 " Ruby files
 let g:ruby_indent_block_style = 'do'
