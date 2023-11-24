@@ -1,25 +1,27 @@
 # Include local config first
 [ -s ~/.zshrc.local ] && source ~/.zshrc.local
 
+# 1Password
+[ -s ~/.config/op/plugins.sh ] && source ~/.config/op/plugins.sh
+
 # homebrew
-if type brew &>/dev/null; then
+if type brew &> /dev/null; then
   export PATH=/usr/local/sbin:/usr/local/bin:$PATH
 
   # completions
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
   autoload -Uz compinit
   compinit
+
+  # python
+  export PATH=/opt/homebrew/opt/python@3.11/libexec/bin:$PATH
+  export PATH=/Users/jeff/Library/Python/3.9/bin:$PATH
 fi
 
 # rbenv
 if which rbenv > /dev/null; then
   eval "$(rbenv init -)"
 fi
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
 
 # direnv
 if which direnv > /dev/null; then
