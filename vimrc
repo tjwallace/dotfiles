@@ -12,6 +12,10 @@ let mapleader = "\\"
 " limit concurrency to avoid hammering GitHub
 let g:plug_threads = 2
 
+" TODO: consider using these defaults
+" https://github.com/sheerun/vimrc
+" https://github.com/tpope/vim-sensible
+
 call plug#begin('~/.vim/plugged')
 
 " Colors
@@ -103,12 +107,17 @@ Plug 'yaegassy/coc-ansible', {'do': 'yarn install --frozen-lockfile'}
 
 call plug#end()
 
+" Disable strange Vi defaults.
+set nocompatible
+
 set number
 set ruler
 syntax enable
 set encoding=utf-8
 set laststatus=2 " always show the status bar
-set backspace=start,eol,indent
+
+" Allow backspace in insert mode.
+set backspace=indent,eol,start
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
@@ -118,8 +127,8 @@ set updatetime=300
 " diagnostics appear/become resolved.
 set signcolumn=yes
 
-" leader character
-let mapleader = "\\"
+" Reload unchanged files automatically.
+set autoread
 
 " whitespace
 set tabstop=2
@@ -155,7 +164,11 @@ set showmatch
 " bounce between brackets
 nmap <tab> %
 vmap <tab> %
-runtime! macros/matchit.vim
+
+" Load matchit.vim, but only if the user hasn't installed a newer version.
+if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
+  runtime! macros/matchit.vim
+endif
 
 " show in title bar
 set title
