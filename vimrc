@@ -299,7 +299,6 @@ let g:coc_filetype_map = {
 let g:ruby_indent_block_style = 'do'
 let g:rubycomplete_rails = 1
 let g:rubycomplete_load_gemfile = 1
-let g:ruby_spellcheck_strings = 1
 
 " highlight cap files
 au BufRead,BufNewFile *.cap set filetype=ruby
