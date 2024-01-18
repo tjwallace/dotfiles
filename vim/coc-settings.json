@@ -2,12 +2,15 @@
   "suggest.noselect": true,
 
   "languageserver": {
+    "docker-compose": {
+      "command": "docker-compose-langserver",
+      "args": ["--stdio"],
+      "filetypes": ["yaml.docker-compose"],
+    },
     "terraform": {
       "command": "terraform-ls",
       "args": ["serve"],
       "filetypes": ["terraform", "tf"],
-      "initializationOptions": {},
-      "settings": {}
     }
   }
 }
