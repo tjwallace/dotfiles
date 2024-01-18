@@ -19,6 +19,8 @@ IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb-history"
   end
 end
 
+Time.zone = 'America/Vancouver' if Time.respond_to?(:zone=)
+
 # Enable lambda prompts. http://twitter.com/acetoxy/status/26734736005
 class IRB::Irb
   alias original_prompt prompt
