@@ -18,6 +18,10 @@ let g:plug_threads = 2
 
 call plug#begin('~/.vim/plugged')
 
+" General language packs
+" Plug 'sheerun/vim-polyglot'
+Plug '~/code/tjwallace/vim-polyglot'
+
 " Colors
 Plug 'altercation/vim-colors-solarized'
 
@@ -50,6 +54,8 @@ Plug 'mhinz/vim-signify'
 
 " Tools - Tab Completion
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+" Plug 'neoclide/coc.nvim', { 'tag': 'v0.0.82' }
+" Plug 'neoclide/coc.nvim', { 'commit': 'e956e38964c3b4ec0531ecd9ff6c253b97f2c656' }
 
 " Tools - Formatting
 Plug 'Raimondi/delimitMate'
