@@ -6,5 +6,6 @@
 .bin
 .bundle
 .byebug_history
+.git-blame-ignore-revs
 dump.rdb
 node_modules
