@@ -23,7 +23,7 @@
 	up = fetch --all --prune
 [core]
 	editor = vim
-	pager = most
+	pager = delta
 	excludesfile = ~/.gitignore
 [color]
 	ui = auto
@@ -36,6 +36,7 @@
 	gpgsign = true
 [merge]
 	tool = opendiff
+	conflictstyle = diff3
 [mergetool]
 	keepBackup = false
 [rebase]
@@ -44,5 +45,17 @@
 [rerere]
 	enabled = true
 	autoupdate = true
+[blame]
+	ignoreRevsFile = .git-blame-ignore-revs
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[advice]
+	skippedCherryPicks = false
+[delta]
+	light = true
+	syntax-theme = Solarized (light)
+	line-numbers = true
+[delta "interactive"]
+	keep-plus-minus-markers = false
 [blame]
 	ignoreRevsFile = .git-blame-ignore-revs
