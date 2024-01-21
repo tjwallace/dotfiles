@@ -304,10 +304,6 @@ let g:coc_filetype_map = {
       \ 'yaml.ansible': 'ansible',
       \ }
 
-let g:coc_filetype_map = {
-  \ 'yaml.ansible': 'ansible',
-  \ }
-
 " Ruby files
 let g:ruby_indent_block_style = 'do'
 let g:rubycomplete_rails = 1
