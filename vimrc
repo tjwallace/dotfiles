@@ -18,6 +18,10 @@ let g:plug_threads = 2
 
 call plug#begin('~/.vim/plugged')
 
+" General language packs
+" Plug 'sheerun/vim-polyglot'
+Plug '~/code/tjwallace/vim-polyglot'
+
 " Colors
 Plug 'altercation/vim-colors-solarized'
 
@@ -50,6 +54,8 @@ Plug 'mhinz/vim-signify'
 
 " Tools - Tab Completion
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+" Plug 'neoclide/coc.nvim', { 'tag': 'v0.0.82' }
+" Plug 'neoclide/coc.nvim', { 'commit': 'e956e38964c3b4ec0531ecd9ff6c253b97f2c656' }
 
 " Tools - Formatting
 Plug 'Raimondi/delimitMate'
@@ -60,46 +66,21 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 
 " Languages
+Plug 'sheerun/vim-polyglot'
 Plug 'vim-scripts/csv.vim'
-Plug 'tpope/vim-git'
-Plug 'tpope/vim-markdown'
-Plug 'derekwyatt/vim-scala'
-Plug 'hashivim/vim-hashicorp-tools'
-Plug 'jparise/vim-graphql'
-Plug 'wfxr/protobuf.vim'
 
 " Languages - Ruby
 Plug 'tpope/vim-rbenv'
-Plug 'vim-ruby/vim-ruby'
-Plug 'keith/rspec.vim'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-rails'
-Plug 'slim-template/vim-slim'
-Plug 'tpope/vim-haml'
-Plug 'tpope/vim-cucumber'
 
 " Languages - Yavascript
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'kchmck/vim-coffee-script'
-Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'burnettk/vim-angular'
-Plug 'digitaltoad/vim-jade'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript'] }
 
-" Languages - Yavascript - Typescript
-Plug 'HerringtonDarkholme/yats.vim'
-
 " Languages - Web
 Plug 'ap/vim-css-color'
-Plug 'othree/html5.vim'
-Plug 'cakebaker/scss-syntax.vim'
-Plug 'iloginow/vim-stylus'
-
-" Languages - Docker
-Plug 'ekalinin/Dockerfile.vim'
 
 " Languages - Ansible
 Plug 'pearofducks/ansible-vim'
