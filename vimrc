@@ -19,7 +19,9 @@ let g:plug_threads = 2
 call plug#begin('~/.vim/plugged')
 
 " Colors
-Plug 'altercation/vim-colors-solarized'
+Plug 'ericbn/vim-solarized'
+Plug 'sblauen/chalk'
+Plug 'kaicataldo/material.vim'
 
 " Tools
 Plug 'bling/vim-airline'
@@ -183,11 +185,20 @@ nnoremap <leader><space> :noh<cr>
 " wrap at word
 set linebreak
 
-" colorscheme
+" COLORSCHEMES
+" solarized
+set termguicolors
 set background=light
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
 colorscheme solarized
+
+" chalk
+" colorscheme chalk
+
+" material
+" let g:material_terminal_italics = 1
+" let g:material_theme_style = 'palenight'
+" let g:airline_theme = 'material'
+" colorscheme material
 
 " make cursor move by visual lines instead of file lines (when wrapping)
 map k gk
