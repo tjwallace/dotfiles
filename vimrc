@@ -37,6 +37,7 @@ Plug 'janko-m/vim-test'
 Plug 'tpope/vim-projectionist'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
+Plug 'jpalardy/spacehi.vim'
 
 " Tools - Search
 Plug 'mileszs/ack.vim'
@@ -69,6 +70,7 @@ Plug 'derekwyatt/vim-scala'
 Plug 'hashivim/vim-hashicorp-tools'
 Plug 'jparise/vim-graphql'
 Plug 'wfxr/protobuf.vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Languages - Ruby
 Plug 'tpope/vim-rbenv'
@@ -134,7 +136,17 @@ set tabstop=2
 set shiftwidth=2
 set smarttab
 set expandtab
-set list listchars=tab:▸\ ,trail:·
+
+" spacehi - space/tab highlighting
+augroup mostly_spacehi
+  autocmd!
+  autocmd Syntax * SpaceHi
+  autocmd FileType help     NoSpaceHi
+  autocmd FileType diff     NoSpaceHi
+  autocmd FileType man      NoSpaceHi
+  autocmd FileType go       NoSpaceHi
+  autocmd FileType make     NoSpaceHi
+augroup END
 
 " backups
 set backupdir=~/.vim/tmp/backup//
@@ -288,6 +300,11 @@ endfunction
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list
+" Use `[g` and `]g` to navigate diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
 " GoTo code navigation
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -296,6 +313,14 @@ nmap <silent> gr <Plug>(coc-references)
 
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
+
+" Remap keys for applying refactor code actions
+nmap <silent> <leader>re <Plug>(coc-codeaction-refactor)
+xmap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
+nmap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
+
+" Remap keys for applying code actions at the cursor position
+nmap <leader>ac  <Plug>(coc-codeaction-cursor)
 
 " Global coc extensions
 let g:coc_global_extensions = [
@@ -306,6 +331,7 @@ let g:coc_global_extensions = [
       \ 'coc-syntax',
       \ '@yaegassy/coc-ansible',
       \ 'coc-docker',
+      \ 'coc-go',
       \ ]
 
 let g:coc_filetype_map = {
