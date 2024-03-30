@@ -53,10 +53,7 @@ alias ll='ls -lh'
 alias l='ls -lah'
 alias bi='bundle install && bundle binstubs --all --path .bundle/bin'
 
-# use most as pager if available
-if which most > /dev/null; then
-  export PAGER=most
-fi
+export PAGER="less -R"
 
 export EDITOR=vim
 
