@@ -332,6 +332,7 @@ let g:coc_global_extensions = [
       \ '@yaegassy/coc-ansible',
       \ 'coc-docker',
       \ 'coc-go',
+      \ 'coc-yaml',
       \ ]
 
 let g:coc_filetype_map = {
