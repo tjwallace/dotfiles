@@ -72,6 +72,9 @@ fi
 
 # fzf options
 export FZF_DEFAULT_OPTS="--history=$HOME/.fzf_history"
+if which fzf > /dev/null; then
+  source <(fzf --zsh)
+fi
 
 # kubectl completion
 if which kubectl > /dev/null; then
