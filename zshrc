@@ -78,3 +78,6 @@ fi
 if which kubectl > /dev/null; then
   source <(kubectl completion zsh)
 fi
+
+# difftool
+export DFT_TAB_WIDTH=2
