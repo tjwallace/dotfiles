@@ -9,9 +9,7 @@ if type brew &> /dev/null; then
   export PATH=/usr/local/sbin:/usr/local/bin:$PATH
 
   # completions
-  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-  autoload -Uz compinit
-  compinit
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
   # python
   export PATH=/opt/homebrew/opt/python@3.11/libexec/bin:$PATH
