@@ -1,4 +1,3 @@
---skip-action-mailer
---skip-action-mailbox
---skip-action-text
 --skip-test
+--api
+--minimal
