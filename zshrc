@@ -81,3 +81,5 @@ fi
 
 # difftool
 export DFT_TAB_WIDTH=2
+
+export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
