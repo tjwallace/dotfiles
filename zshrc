@@ -53,7 +53,7 @@ alias bi='bundle install && bundle binstubs --all --path .bundle/bin'
 
 export PAGER="less -R"
 
-export EDITOR=vim
+export EDITOR=nvim
 
 # ctrl+left/right
 bindkey '5D' emacs-backward-word
